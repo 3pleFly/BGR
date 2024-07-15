@@ -1,0 +1,48 @@
+/* סגנונות למכולה הכללית */
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+/* סגנונות לחלק המרכזי */
+.main-section {
+    height: 100vh;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: lightblue;
+}
+
+/* סגנונות לחלקים הנוספים שמתגלים בגלילה */
+.additional-section {
+    height: 100vh;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-top: 1px solid #ccc;
+}
+
+.big-button {
+    font-size: 50px;
+}
+
+/* סגנונות קיימים */
+
+/* סגנונות חדשים */
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* מכניס את הקומפוננטים למרכז הדף אנכית */
+}
+
+.center-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

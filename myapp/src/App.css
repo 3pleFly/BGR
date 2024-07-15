@@ -1,0 +1,8 @@
+body {
+    background-color: #F2F0E8;
+    overflow-y: scroll;
+    position: relative;
+    width: 1440px;
+    height: 1024px;
+    /* scroll-behavior: smooth; */
+}
