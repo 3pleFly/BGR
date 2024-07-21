@@ -1,0 +1,31 @@
+.customName {
+    /* Aharon Berger */
+
+
+
+    font-family: 'Greta Text H+L';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 56px;
+    line-height: 67px;
+    text-align: center;
+
+    color: #765330;
+
+
+}
+
+.custom_AdvCPA {
+    /* Adv. (CPA) */
+
+    font-family: 'Greta Text H+L';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 43px;
+    text-align: center;
+
+    color: #765330;
+
+
+}

@@ -1,3 +1,5 @@
+body {}
+
 /* סגנונות בסיסיים */
 .CustomButton_BGR_B,
 .CustomButton_BGR_G,
@@ -5,91 +7,30 @@
     background: none;
     border: none;
     padding: 0;
-    cursor: pointer;
-    transition: transform 0.3s ease-in-out, left 0.3s ease-in-out, right 0.3s ease-in-out;
-}
-
-
-.CustomButton_BGR_B {
-    /* Frame */
-
-    position: absolute;
-    left: 19.93%;
-    right: 56.74%;
-    top: 24.32%;
-    bottom: 38.18%;
+    transition: transform 0.3s ease-in-out, padding-left 0.3s, padding-right 0.3s, margin-left 0.3s ease-in-out;
 }
 
 .CustomButton_BGR_G {
-    /* Frame */
-
-    position: absolute;
-    left: 37.99%;
-    right: 38.54%;
-    top: 24.02%;
-    bottom: 37.89%;
+    margin-left: -60px;
 }
 
 .CustomButton_BGR_R {
-    /* Frame */
+    margin-left: -90px;
+}
 
-    position: absolute;
-    left: 54.31%;
-    right: 17.36%;
-    top: 23.93%;
-    bottom: 37.99%;
+
+.CustomButton_BGR_G:hover {
+    transform: scale(1.2);
+}
+
+.move-CustomButton_BGR_B {
+    padding-right: 50px;
+}
+
+.move-CustomButton_BGR_R {
+    padding-left: 50px;
 }
 
 .CustomButton_BGR_B:hover {
     transform: scale(1.2);
-    /* Frame */
-
-    position: absolute;
-    left: 15.35%;
-    right: 57.64%;
-    top: 21.29%;
-    bottom: 35.35%;
-}
-
-.CustomButton_BGR_G:hover {
-    transform: scale(1.2);
-    /* Frame */
-
-    position: absolute;
-    left: 36.04%;
-    right: 36.04%;
-    top: 20.41%;
-    bottom: 34.38%;
-}
-
-.CustomButton_BGR_R:hover {
-    transform: scale(1.2);
-
-    /* Frame */
-
-    position: absolute;
-    left: 55.07%;
-    right: 11.11%;
-    top: 20.41%;
-    bottom: 34.08%;
-}
-
-.container:hover .CustomButton_BGR_G:hover~.CustomButton_BGR_B {
-    /* Frame */
-
-    position: absolute;
-    left: 17.22%;
-    right: 59.44%;
-    top: 24.32%;
-    bottom: 38.18%;
-}
-
-.container:hover .CustomButton_BGR_G:hover~.CustomButton_BGR_R {
-    /* Frame */
-
-    position: absolute;
-    left: 58.89%;
-    right: 12.78%;
-    top: 23.93%;
-    bottom: 37.99%;
 }
