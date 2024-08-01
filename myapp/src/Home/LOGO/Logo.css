@@ -27,10 +27,15 @@ body {}
     padding-right: 50px;
 }
 
+
+.CustomButton_BGR_B:hover {
+    transform: scale(1.2);
+}
+
 .move-CustomButton_BGR_R {
     padding-left: 50px;
 }
 
-.CustomButton_BGR_B:hover {
+.CustomButton_BGR_R:hover {
     transform: scale(1.2);
 }

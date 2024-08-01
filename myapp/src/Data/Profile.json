@@ -1,0 +1,30 @@
+{
+    "Profile": [
+        {
+            "image_Profile": "./../Images/Profile/Berger.png",
+            "imageProfileLogo": "./../Images/Profile/B.png",
+            "en_name": "Aharon Berger1",
+            "heb_name": "אהרון ברגר",
+            "typeRule": "עו”ד (רו”ח)",
+            "aboutPerson": "here will be text about the person"
+        },
+        {
+            "image_Profile": "./../Images/Profile/Gabai.png",
+            "imageProfileLogo": "./../Images/Profile/G.png",
+            "en_name": "Aharon Berger1",
+            "heb_name": "אהרון ברגר",
+            "typeRule": "עו”ד (רו”ח)",
+            "aboutPerson": "here will be text about the person"
+        },
+        {
+            "image_Profile": "./../Images/Profile/Rechtshaffen.png",
+            "imageProfileLogo": "./../Images/Profile/R.png",
+            "en_name": "Aharon Berger1",
+            "heb_name": "אהרון ברגר",
+            "typeRule": "עו”ד (רו”ח)",
+            "aboutPerson": "here will be text about the person"
+        }
+    ],
+    "Icon_Back": "./../Images/Profile/Icon_Back.png",
+    "Icon_Continue_Reading": "./../Images/Profile/Icon_Continue_Reading.png"
+}

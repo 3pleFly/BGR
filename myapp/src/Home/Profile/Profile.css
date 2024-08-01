@@ -1,16 +1,15 @@
 .customName {
     /* Aharon Berger */
-
-
-
-    font-family: 'Greta Text H+L';
     font-style: normal;
-    font-weight: 400;
-    font-size: 56px;
-    line-height: 67px;
-    text-align: center;
+    
 
     color: #765330;
+
+    position: relative; /* מיקום יחסי */
+    top: -72px;
+
+    width: 395px; /* רוחב אלמנט */
+    height: 77px; /* גובה אלמנט */
 
 
 }
@@ -26,6 +25,14 @@
     text-align: center;
 
     color: #765330;
+    position: relative; /* מיקום יחסי */
+    top: -72px;
 
 
+}
+
+.customImageProfileLogo{
+    position: relative; /* מיקום יחסי */
+    left: 120px; /* התאמת המיקום האופקF - תנועה שמאלה */ 
+    top: -72px;
 }

@@ -3,9 +3,8 @@ import LogoComp from "./LOGO/LogoComp";
 import LanguageAndAccessibility from "./Language and accessibility/LanguageAndAccessibility";
 import SubtitleComp from "./Subtitle/Subtitle";
 import './Home.css';
-import Profile from "./Profile/Profile";
-import image_Profile_B from './../Images/Profile/B.png';
-import image_Profile_Berger from './../Images/Profile/Berger.png'
+import ProfilesComp from "./Profile/Profiles";
+
 
 const HomeComp = () => {
     return (
@@ -19,7 +18,7 @@ const HomeComp = () => {
                     <SubtitleComp />
                     <ArrowDownComp />
                     <br /><br /><br /><br /><br />
-                    <Profile image_Profile={image_Profile_Berger} imageProfileLogo={image_Profile_B} en_name={'Aharon Berger'} />
+                    <ProfilesComp/>
                 </div>
             </div>
             {/* </div> */}
