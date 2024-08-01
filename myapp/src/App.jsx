@@ -18,7 +18,7 @@ function App() {
       {/* {users} <br />
       <button onClick={() => { dispatch(usersActions.load(parseInt(Math.random() * 100))) }}>Click me</button> */}
 
-      <HomeComp />
+      <HomeComp/>
 
 
     </div>

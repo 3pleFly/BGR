@@ -4,24 +4,85 @@ import LanguageAndAccessibility from "./Language and accessibility/LanguageAndAc
 import SubtitleComp from "./Subtitle/Subtitle";
 import './Home.css';
 import ProfilesComp from "./Profile/Profiles";
+import { Drawer, Typography } from "@mui/material";
+import { useState } from "react";
+import MainPage from "./Components/MainPage";
+import AboutPage from "./Components/AboutPage";
 
 
 const HomeComp = () => {
+    const [openDrawer, setOpenDrawer] = useState(false)
+    const [selectedComponent, setSelectedComponent] = useState('MainPage')
+
+    const toggleDrawer = (newOpen) => () => {
+        setOpenDrawer(newOpen);
+    };
+
+    const renderComponent = () => {
+        switch (selectedComponent) {
+            case "MainPage":
+                return <MainPage />;
+            case "AboutPage":
+                return <AboutPage />
+
+            default:
+                return null;
+        }
+    };
+
     return (
         <div>
+
+            <button className="CustomButtonOpenDrawer" onClick={toggleDrawer(true)}>
+                <img src={'/Images/Icons/OpenDrawer.png'} alt="Icon to continue reading" />
+            </button>
+
+            <Drawer open={openDrawer} anchor={'right'} onClose={toggleDrawer(false)} >
+                <div className="customOpenDrawerContent">
+                    <br /><br /><br /><br />
+                    <button className="hiddenButton" onClick={() => setSelectedComponent('AboutPage')}>
+                        <Typography sx={{ fontSize: '30px', color: '#F2F0E8', textAlign: 'center' }}>
+
+                            אודות
+
+                        </Typography>
+                    </button>
+                    <br />
+                    <div className="customRectangle"></div>
+                    <br />
+                    <button className="hiddenButton">
+                        <Typography sx={{ fontSize: '30px', color: '#F2F0E8', textAlign: 'center' }}>
+                            קצת עלינו
+                        </Typography>
+                    </button>
+                    <br />
+                    <div className="customRectangle"></div>
+                    <br />
+                    <button className="hiddenButton">
+                        <Typography sx={{ fontSize: '30px', color: '#F2F0E8', textAlign: 'center' }}>
+                            טעימה מהפרויקטים שלנו
+                        </Typography>
+                    </button>
+                    <br />
+                    <div className="customRectangle"></div>
+                    <br />
+                    <button className="hiddenButton">
+                        <Typography sx={{ fontSize: '30px', color: '#F2F0E8', textAlign: 'center' }}>
+                            מידע טכני
+                        </Typography>
+                    </button>
+                </div>
+            </Drawer>
+
             <LanguageAndAccessibility />
 
-            {/* <div className="center-content"> */}
-            <div style={{ display: 'flex', textAlign: 'center', justifyContent: 'center', alignItems: 'center' }}>
-                <div>
-                    <LogoComp />
-                    <SubtitleComp />
-                    <ArrowDownComp />
-                    <br /><br /><br /><br /><br />
-                    <ProfilesComp/>
-                </div>
-            </div>
-            {/* </div> */}
+            {
+                renderComponent()
+            }
+
+
+
+
         </div>
     );
 }

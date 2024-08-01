@@ -6,3 +6,11 @@ body {
     height: 1024px; */
     /* scroll-behavior: smooth; */
 }
+
+.column {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+}

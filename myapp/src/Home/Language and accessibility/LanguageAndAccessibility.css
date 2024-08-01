@@ -1,5 +1,5 @@
 .CustomAccessibility {
-    position: absolute;
+    position: fixed;
     width: 80px;
     height: 80px;
     left: 75px;
@@ -17,7 +17,7 @@
 }
 
 .CustomLanguageEnglish {
-    position: absolute;
+    position: fixed;
     width: 80px;
     height: 80px;
     left: 181px;
@@ -35,7 +35,7 @@
 }
 
 .CustomLanguageHebrew {
-    position: absolute;
+    position: fixed;
     width: 80px;
     height: 80px;
     left: 287px;

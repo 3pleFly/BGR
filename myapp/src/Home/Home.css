@@ -38,11 +38,77 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh; /* מכניס את הקומפוננטים למרכז הדף אנכית */
+    height: 100vh;
+    /* מכניס את הקומפוננטים למרכז הדף אנכית */
 }
 
 .center-content {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+
+
+
+.CustomButtonOpenDrawer {
+    /* Group 6 */
+
+    position: fixed;
+    top: 41px;
+    /* תוכל לשנות את הערך לפי הצורך */
+    right: 10px;
+    /* תוכל לשנות את הערך לפי הצורך */
+    z-index: 1000;
+    /* תוודא שהוא מעל כל האלמנטים האחרים */
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.customOpenDrawerContent {
+    background-color: #765330;
+    height: 100%;
+    padding: 20px;
+    min-width: 500px;
+    /* ניתן לשנות את הערכים לפי הצורך */
+}
+
+.customRectangle {
+
+    background: #F2F0E8;
+
+
+
+    /* Rectangle 5 */
+
+    position: absolute;
+    width: 85%;
+    height: 1%;
+}
+
+.customTextOpenDrawer {
+    /* אודות */
+
+    text-align: center;
+    color: #F2F0E8;
+    font-size: 80rem;
+    ;
+    /* שנה את הערך לפי הצורך */
+
+
+}
+
+.hiddenButton {
+    background: none;
+    border: none;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
 }
