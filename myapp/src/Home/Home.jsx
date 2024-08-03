@@ -8,6 +8,7 @@ import { Drawer, Typography } from "@mui/material";
 import { useState } from "react";
 import MainPage from "./Components/MainPage";
 import AboutPage from "./Components/AboutPage";
+import ProjectsComp from "./Components/Projects";
 
 
 const HomeComp = () => {
@@ -21,10 +22,11 @@ const HomeComp = () => {
     const renderComponent = () => {
         switch (selectedComponent) {
             case "MainPage":
-                return <MainPage />;
+                return <MainPage />
             case "AboutPage":
                 return <AboutPage />
-
+            case 'ProjectsPage':
+                return <ProjectsComp />
             default:
                 return null;
         }
@@ -50,7 +52,7 @@ const HomeComp = () => {
                     <br />
                     <div className="customRectangle"></div>
                     <br />
-                    <button className="hiddenButton">
+                    <button className="hiddenButton" onClick={() => setSelectedComponent('MainPage')}>
                         <Typography sx={{ fontSize: '30px', color: '#F2F0E8', textAlign: 'center' }}>
                             קצת עלינו
                         </Typography>
@@ -58,7 +60,7 @@ const HomeComp = () => {
                     <br />
                     <div className="customRectangle"></div>
                     <br />
-                    <button className="hiddenButton">
+                    <button className="hiddenButton" onClick={() => setSelectedComponent('ProjectsPage')}>
                         <Typography sx={{ fontSize: '30px', color: '#F2F0E8', textAlign: 'center' }}>
                             טעימה מהפרויקטים שלנו
                         </Typography>
