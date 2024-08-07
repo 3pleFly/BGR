@@ -12,6 +12,7 @@ const ProfilesComp = () => {
                 return <div key={key}>
                     <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
                     <Profile
+                        profileId={profile.id}
                         image_Profile={profile.image_Profile}
                         imageProfileLogo={profile.imageProfileLogo}
                         en_name={profile.en_name}

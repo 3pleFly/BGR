@@ -1,7 +1,9 @@
 {
     "Profile": [
         {
+            "id": "1",
             "image_Profile": "./../Images/Profile/Berger.png",
+            "image_FullProfile": "./../Images/Profile/yechielRechtschaffenHome.png",
             "imageProfileLogo": "./../Images/Profile/B.png",
             "en_name": "Aharon Berger",
             "heb_name": "אהרון ברגר",
@@ -9,7 +11,9 @@
             "aboutPerson": "here will be text about the person"
         },
         {
+            "id": "2",
             "image_Profile": "./../Images/Profile/Gabai.png",
+            "image_FullProfile": "./../Images/Profile/yechielRechtschaffenHome.png",
             "imageProfileLogo": "./../Images/Profile/G.png",
             "en_name": "Aharon Berger",
             "heb_name": "אהרון ברגר",
@@ -17,12 +21,15 @@
             "aboutPerson": "here will be text about the person"
         },
         {
+            "id": "3",
             "image_Profile": "./../Images/Profile/yechielRechtschaffenHome.png",
+            "image_FullProfile": "./../Images/Profile/yechielRechtschaffenProfile.png",
             "imageProfileLogo": "./../Images/Profile/R.png",
             "en_name": "Yechiel Rechtschaffen",
             "heb_name": "יחיאל רכטשאפן",
             "typeRule": "עו”ד (רו”ח)",
-            "aboutPerson": "here will be text about the person"
+            "aboutPerson": "here will be text about the person",
+            "aboutPersonFullProfile": "הרב יחיאל רכטשאפן הינו בוגר הפקולטה למשפטים והפקולטה לניהול באוניברסיטת תל אביב.\n\nליחיאל רישיון עריכת דין ורישיון ראיית חשבון.\n\nיחיאל עוסק ביעוץ מיסוי מקרקעין מעל 25 שנה, והיה ראש תחום מיסוי מקרקעין בפירמת ראית החשבון ארנסט יאנג ישראל במשך כ-11 שנים.\n\nבעברו יחיאל היה מרצה ומתרגל של דיני מיסוי מקרקעין במכללות רמת גן, פתח תקוה, שערי משפט, והמכללה למינהל ראשל\"צ ואף פרסם מספר מאמרים מקצועיים, חלקם היוו בסיס לפסיקה מאוחרת.\n\nיחיאל מומחה בחישובי המס ובייצוג יזמים ולקוחות פרטיים אל מול שלטונות המס בפרוייקטים יזמיים בעיקר התחדשות עירונית, וכן בגיבוש תכנוני-מס יצירתיים וארוכי טווח לפתרונות מס בעסקאות מורכבות, מתוך ראייה רוחבית של כלל צרכי הלקוח.\n\nליחיאל הסמכה לרבנות והוא שימש כרב צבאי (במיל') בדרגת רב סרן.\n\n-"
         }
     ],
     "Icon_Back": "./../Images/Profile/Icon_Back.png",

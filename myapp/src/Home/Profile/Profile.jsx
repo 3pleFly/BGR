@@ -5,13 +5,13 @@ import './Profile.css'
 import jsonProfile from './../../Data/Profile.json'
 import { useNavigate } from 'react-router-dom';
 
-const Profile = ({ image_Profile, imageProfileLogo, en_name, heb_name, typeRule, aboutPerson }) => {
+const Profile = ({ profileId, image_Profile, imageProfileLogo, en_name, heb_name, typeRule, aboutPerson }) => {
 
     const navigate = useNavigate();
 
     const moveToSpecificProfile = () => {
         sessionStorage['scrollYPosition'] = window.scrollY;
-        navigate('/profile/3') // הכנס את ה-URL של האתר האחר
+        navigate(`/profile/${profileId}`) // הכנס את ה-URL של האתר האחר
         // sessionStorage['yAxis'] = yAxis;
     }
 
