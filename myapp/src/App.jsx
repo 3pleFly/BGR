@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from "react-redux"
 import { usersActions } from "./Redux/usersSlice";
 import './App.css'
 import HomeComp from "./Home/Home";
+import { Route, Routes } from "react-router-dom";
+import FullProfileComp from "./Home/Profile/FullProfile";
 
 function App() {
   // const users = useSelector((state) => state.users.users);
@@ -18,7 +20,14 @@ function App() {
       {/* {users} <br />
       <button onClick={() => { dispatch(usersActions.load(parseInt(Math.random() * 100))) }}>Click me</button> */}
 
-      <HomeComp/>
+      {/* <HomeComp/> */}
+
+      <Routes>
+        {/* Dynamic Routing - Params */}
+        <Route path='/' element={<HomeComp />} />
+        <Route path='/profile/:profileId' element={<FullProfileComp />} />
+      </Routes>
+
 
 
     </div>

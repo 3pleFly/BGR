@@ -1,38 +1,90 @@
-.customName {
+.customNameEn {
     /* Aharon Berger */
     font-style: normal;
-    
+    font-size: 45px !important;
 
     color: #765330;
 
-    position: relative; /* מיקום יחסי */
+    position: relative;
+    /* מיקום יחסי */
     top: -72px;
 
-    width: 395px; /* רוחב אלמנט */
-    height: 77px; /* גובה אלמנט */
+    left: 30px;
 
 
+}
+
+
+.customNameHeb {
+    /* אהרון ברגר */
+
+    font-style: normal;
+    font-size: 64px !important;
+
+    color: #765330;
+
+    position: relative;
+    /* מיקום יחסי */
+    top: -72px;
+
+    left: 30px;
+
+
+}
+
+.customSubNameHeb {
+    font-style: normal;
+    font-size: 20px !important;
+
+    color: #765330;
+
+    position: relative;
+    /* מיקום יחסי */
+    top: -72px;
+
+    left: 30px;
+
+}
+
+.custom_textAboutPeople {
+    font-style: normal;
+    font-size: 30px !important;
+
+    color: #765330;
+
+    position: relative;
+    /* מיקום יחסי */
+    top: -72px;
+
+    left: 30px;
 }
 
 .custom_AdvCPA {
     /* Adv. (CPA) */
 
+
     font-family: 'Greta Text H+L';
     font-style: normal;
     font-weight: 400;
-    font-size: 36px;
+    font-size: 36px !important;
     line-height: 43px;
     text-align: center;
 
     color: #765330;
-    position: relative; /* מיקום יחסי */
+    position: relative;
+    /* מיקום יחסי */
     top: -72px;
+
+
+
 
 
 }
 
-.customImageProfileLogo{
-    position: relative; /* מיקום יחסי */
-    left: 120px; /* התאמת המיקום האופקF - תנועה שמאלה */ 
+.customImageProfileLogo {
+    position: relative;
+    /* מיקום יחסי */
+    left: 83px;
+    /* התאמת המיקום האופקF - תנועה שמאלה */
     top: -72px;
 }

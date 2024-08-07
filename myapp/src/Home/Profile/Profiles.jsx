@@ -10,7 +10,7 @@ const ProfilesComp = () => {
             {jsonProfile.Profile.map((profile, key) => {
 
                 return <div key={key}>
-                    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
                     <Profile
                         image_Profile={profile.image_Profile}
                         imageProfileLogo={profile.imageProfileLogo}

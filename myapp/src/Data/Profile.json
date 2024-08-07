@@ -3,7 +3,7 @@
         {
             "image_Profile": "./../Images/Profile/Berger.png",
             "imageProfileLogo": "./../Images/Profile/B.png",
-            "en_name": "Aharon Berger1",
+            "en_name": "Aharon Berger",
             "heb_name": "אהרון ברגר",
             "typeRule": "עו”ד (רו”ח)",
             "aboutPerson": "here will be text about the person"
@@ -11,16 +11,16 @@
         {
             "image_Profile": "./../Images/Profile/Gabai.png",
             "imageProfileLogo": "./../Images/Profile/G.png",
-            "en_name": "Aharon Berger1",
+            "en_name": "Aharon Berger",
             "heb_name": "אהרון ברגר",
             "typeRule": "עו”ד (רו”ח)",
             "aboutPerson": "here will be text about the person"
         },
         {
-            "image_Profile": "./../Images/Profile/Rechtshaffen.png",
+            "image_Profile": "./../Images/Profile/yechielRechtschaffenHome.png",
             "imageProfileLogo": "./../Images/Profile/R.png",
-            "en_name": "Aharon Berger1",
-            "heb_name": "אהרון ברגר",
+            "en_name": "Yechiel Rechtschaffen",
+            "heb_name": "יחיאל רכטשאפן",
             "typeRule": "עו”ד (רו”ח)",
             "aboutPerson": "here will be text about the person"
         }

@@ -8,7 +8,8 @@ const LogoComp = () => {
     const [isHovered, setIsHovered] = useState(false);
 
     return (
-        <div style={{ display: 'flex', justifyContent: 'center',textAlign:'center', alignItems: 'center', height:'60vh' }}>
+        // <div style={{ display: 'flex', justifyContent: 'center',textAlign:'center', alignItems: 'center', height:'60vh' }}>
+        <div>
             <button className={`CustomButton_BGR_B ${isHovered ? 'move-CustomButton_BGR_B ' : ''}`}>
                 <img src={imageBGR_B} alt="Custom Button B" />
             </button>

@@ -12,7 +12,13 @@ const MainPage = () => {
                 <br />
                 <br />
                 <br />
+                <br />
+                <br />
+                <br />
+                <br />
                 <LogoComp />
+                <br />
+                <br />
                 <SubtitleComp />
                 <ArrowDownComp />
                 <br /><br /><br /><br /><br />

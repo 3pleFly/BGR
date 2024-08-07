@@ -76,7 +76,7 @@ const HomeComp = () => {
                 </div>
             </Drawer>
 
-            <LanguageAndAccessibility />
+            {/* <LanguageAndAccessibility /> */}
 
             {
                 renderComponent()
