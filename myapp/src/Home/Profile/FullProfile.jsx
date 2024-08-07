@@ -25,7 +25,7 @@ const FullProfileComp = () => {
     return (
         <div>
             {console.log(detailsAboutProfile)}
-            <div className='customFullProfile'>
+            <div style={{ display: 'flex', textAlign: 'center', justifyContent: 'center', alignItems: 'center' }}>
                 <div>
                     <img className='customFullProfileImageProfile' src={detailsAboutProfile.image_FullProfile} alt="Image Profile" />
                 </div>

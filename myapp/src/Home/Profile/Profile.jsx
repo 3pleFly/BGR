@@ -15,9 +15,14 @@ const Profile = ({ profileId, image_Profile, imageProfileLogo, en_name, heb_name
         // sessionStorage['yAxis'] = yAxis;
     }
 
+    const createMarkup = (text) => {
+        const formattedText = text ? text.replace(/\n/g, '<br />') : '';
+        return { __html: formattedText };
+    };
+
     return (
         <div>
-            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+            <div style={{ display: 'flex' }}>
                 <div>
                     <img src={imageProfileLogo} alt="Image Profile logo" className='customImageProfileLogo' />
                     <Typography className='customNameEn'>{en_name}</Typography>
@@ -28,18 +33,17 @@ const Profile = ({ profileId, image_Profile, imageProfileLogo, en_name, heb_name
                 <div>
                     <Typography className='customNameHeb'>{heb_name}</Typography>
                     <Typography className='customSubNameHeb'>{typeRule}</Typography>
-                    <Typography className='custom_textAboutPeople'>{aboutPerson}</Typography>
-                    <div style={{ display: 'flex', textAlign: 'center', justifyContent: 'center', alignItems: 'center' }}>
-                        <div>
-                            <img src={jsonProfile.Icon_Back} alt="Icon Back" />
+                    <Typography
+                        className='custom_textAboutPeople'
+                        dangerouslySetInnerHTML={createMarkup(aboutPerson)} />
+                    <div>
+                        <div className='CustomContinueReading' onClick={() => moveToSpecificProfile()}>
+                            <img src={jsonProfile.Icon_Continue_Reading} alt="Icon to continue reading" style={{ cursor: 'pointer' }} />
                         </div>
-                        <button onClick={() => moveToSpecificProfile()}>
-                            <img src={jsonProfile.Icon_Continue_Reading} alt="Icon to continue reading" />
-                        </button>
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     )
 }
 

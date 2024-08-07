@@ -18,45 +18,80 @@
 .customNameHeb {
     /* אהרון ברגר */
 
-    font-style: normal;
+
+    width: 398px !important;
+    height: 77px !important;
+    left: 935px !important;
+    top: 232px !important;
+
+    font-family: 'Greta Text H+L' !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
     font-size: 64px !important;
+    line-height: 77px !important;
+    /* identical to box height */
+    text-align: right !important;
 
-    color: #765330;
-
-    position: relative;
-    /* מיקום יחסי */
-    top: -72px;
-
-    left: 30px;
+    color: #765330 !important;
 
 
 }
 
 .customSubNameHeb {
-    font-style: normal;
-    font-size: 20px !important;
+    /* עו”ד (רו”ח) */
 
-    color: #765330;
 
-    position: relative;
-    /* מיקום יחסי */
-    top: -72px;
+    /* עו”ד (רו”ח) */
 
-    left: 30px;
+    height: 21px !important;
+    left: 1222px !important;
+    top: 305px !important;
+
+    font-family: 'Greta Text H+L' !important;
+    font-style: normal !important;
+    font-weight: 680 !important;
+    font-size: 24px !important;
+    line-height: 29px !important;
+    text-align: right !important;
+
+    color: #765330 !important;
+
+
+
+
 
 }
 
 .custom_textAboutPeople {
-    font-style: normal;
+    /* אהרון ברגר הינו עו"ד ור"ח. שימש בתפקידים מרובים ברשות המסים משך כ-15 שנה וכיהן בתפקידים שונים, שהאחרון שבהם כמנהל תחום בכיר (שומה ובקורת – מע"מ ומס קניה) בהנהלת רשות המסים. אהרן מומחה בייצוג לקוחות בבתי משפט מול רשות המסים בהיבטים אזרחיים ופליליים. */
+
+
+
+    /* אהרון ברגר הינו עו"ד ור"ח. שימש בתפקידים מרובים ברשות המסים משך כ-15 שנה וכיהן בתפקידים שונים, שהאחרון שבהם כמנהל תחום בכיר (שומה ובקורת – מע"מ ומס קניה) בהנהלת רשות המסים. אהרן מומחה בייצוג לקוחות בבתי משפט מול רשות המסים בהיבטים אזרחיים ופליליים. */
+
+    /* אהרון ברגר הינו עו"ד ור"ח. שימש בתפקידים מרובים ברשות המסים משך כ-15 שנה וכיהן בתפקידים שונים, שהאחרון שבהם כמנהל תחום בכיר (שומה ובקורת – מע"מ ומס קניה) בהנהלת רשות המסים. אהרן מומחה בייצוג לקוחות בבתי משפט מול רשות המסים בהיבטים אזרחיים ופליליים. */
+
+
+    width: 404px !important;
+    height: 360px !important;
+    left: 929px !important;
+    top: 387px !important;
+
+    font-family: 'Greta Text H+L' !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
     font-size: 30px !important;
+    line-height: 36px !important;
+    text-align: right !important;
 
-    color: #765330;
+    color: #765330 !important;
 
-    position: relative;
-    /* מיקום יחסי */
-    top: -72px;
 
-    left: 30px;
+
+    direction: rtl !important;
+    /* כיוון הטקסט מימין לשמאל */
+    unicode-bidi: plaintext !important;
+    /* טיפול בכיווניות של טקסטים מורכבים */
 }
 
 .custom_AdvCPA {
@@ -87,4 +122,19 @@
     left: 83px;
     /* התאמת המיקום האופקF - תנועה שמאלה */
     top: -72px;
+}
+
+.CustomContinueReading {
+    /* Group 30 */
+
+    /* Group 30 */
+
+
+    height: 35px;
+    left: 1139px;
+    top: 828px;
+
+
+
+
 }
