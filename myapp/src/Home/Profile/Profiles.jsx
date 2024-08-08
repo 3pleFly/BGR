@@ -1,10 +1,10 @@
 import React from 'react'
 import Profile from './Profile'
+import ProfileWithOutLogoComp from './ProfileWithOutLogo/ProfileWithOutLogo'
 
 
 
 import jsonProfile from './../../Data/Profile.json'
-import ProfileWithOutLogoComp from './ProfileWithOutLogo/ProfileWithOutLogo'
 const ProfilesComp = () => {
     return (
         <div>
@@ -41,6 +41,11 @@ const ProfilesComp = () => {
                             heb_name={profile.heb_name}
                             typeRule={profile.typeRule}
                             aboutPerson={profile.aboutPerson} />
+                        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
                     </div>
                 })
             }

@@ -6,7 +6,7 @@ import ProfilesComp from '../Profile/Profiles'
 
 const MainPage = () => {
     return (
-        <div style={{ display: 'flex', textAlign: 'center', justifyContent: 'center', alignItems: 'center' }}>
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
             <div>
                 <br />
                 <br />
@@ -15,13 +15,14 @@ const MainPage = () => {
                 <br />
                 <br />
                 <br />
-                <LogoComp />
-                <br />
-                <br />
-                <SubtitleComp />
-                <ArrowDownComp />
-                <br /><br /><br /><br /><br />
-
+                <div style={{ textAlign: 'center' }}>
+                    <LogoComp />
+                    <br />
+                    <br />
+                    <SubtitleComp />
+                    <ArrowDownComp />
+                    <br /><br /><br /><br /><br />
+                </div>
                 <ProfilesComp />
 
             </div>

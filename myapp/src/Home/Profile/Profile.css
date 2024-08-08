@@ -1,15 +1,22 @@
 .customNameEn {
     /* Aharon Berger */
-    font-style: normal;
-    font-size: 45px !important;
+    /* Yechiel Rechtschaffen */
 
-    color: #765330;
 
-    position: relative;
-    /* מיקום יחסי */
-    top: -72px;
+    width: 461px !important;
+    height: 48px !important;
+    left: 143px !important;
+    top: 718px !important;
 
-    left: 30px;
+    font-family: 'Greta Text H+L' !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    font-size: 48px !important;
+    line-height: 58px !important;
+
+    color: #765330 !important;
+
+
 
 
 }
@@ -102,17 +109,22 @@
     /* Adv. (CPA) */
 
 
-    font-family: 'Greta Text H+L';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 36px !important;
-    line-height: 43px;
-    text-align: center;
+    /* Adv. (CPA) */
 
-    color: #765330;
-    position: relative;
-    /* מיקום יחסי */
-    top: -72px;
+    width: 172px !important;
+    height: 38px !important;
+    left: 143px !important;
+    top: 773px !important;
+
+    font-family: 'Greta Text H+L' !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    font-size: 36px !important;
+    line-height: 43px !important;
+
+    color: #765330 !important;
+
+
 
 
 
