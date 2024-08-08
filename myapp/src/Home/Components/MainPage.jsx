@@ -6,7 +6,6 @@ import ProfilesComp from '../Profile/Profiles'
 
 const MainPage = () => {
     return (
-
         <div style={{ display: 'flex', textAlign: 'center', justifyContent: 'center', alignItems: 'center' }}>
             <div>
                 <br />
@@ -22,7 +21,9 @@ const MainPage = () => {
                 <SubtitleComp />
                 <ArrowDownComp />
                 <br /><br /><br /><br /><br />
+
                 <ProfilesComp />
+
             </div>
         </div>
     )
