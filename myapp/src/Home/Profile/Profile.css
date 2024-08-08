@@ -19,6 +19,8 @@
     /* אהרון ברגר */
 
 
+    /* אהרון ברגר */
+
     width: 398px !important;
     height: 77px !important;
     left: 935px !important;
@@ -33,6 +35,8 @@
     text-align: right !important;
 
     color: #765330 !important;
+
+
 
 
 }
@@ -124,17 +128,32 @@
     top: -72px;
 }
 
-.CustomContinueReading {
-    /* Group 30 */
-
-    /* Group 30 */
+.CustomTextContinueReading {
+    /* להמשך קריאה */
 
 
-    height: 35px;
-    left: 1139px;
-    top: 828px;
+    width: 404px !important;
+    left: 929px !important;
 
 
+    font-family: 'Greta Text H+L' !important;
+    font-style: normal !important;
+    font-weight: 500 !important;
+    font-size: 30px !important;
+    line-height: 36px !important;
+    text-align: right !important;
 
+    color: #765330 !important;
+}
+
+
+.customImageProfile {
+    /* אהרן ברגר 1 */
+
+
+    width: 402px;
+    height: 567px;
+    left: 472px;
+    top: 296px;
 
 }

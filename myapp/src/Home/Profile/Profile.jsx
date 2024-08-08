@@ -28,16 +28,22 @@ const Profile = ({ profileId, image_Profile, imageProfileLogo, en_name, heb_name
                     <Typography className='customNameEn'>{en_name}</Typography>
                     <Typography className='custom_AdvCPA'>{'Adv. (CPA)'}</Typography>
                 </div>
-                <img src={image_Profile} alt="Image Profile" />
+                <img className='customImageProfile' src={image_Profile} alt="Image Profile" />
                 {/* Name: */}
                 <div>
                     <Typography className='customNameHeb'>{heb_name}</Typography>
                     <Typography className='customSubNameHeb'>{typeRule}</Typography>
+                    <br />
+                    <br />
                     <Typography
                         className='custom_textAboutPeople'
                         dangerouslySetInnerHTML={createMarkup(aboutPerson)} />
-                    <div>
-                        <div className='CustomContinueReading' onClick={() => moveToSpecificProfile()}>
+
+                    <br />
+                    <br />
+
+                    <div >
+                        <div className='CustomTextContinueReading' onClick={() => moveToSpecificProfile()}>
                             <img src={jsonProfile.Icon_Continue_Reading} alt="Icon to continue reading" style={{ cursor: 'pointer' }} />
                         </div>
                     </div>
@@ -48,4 +54,3 @@ const Profile = ({ profileId, image_Profile, imageProfileLogo, en_name, heb_name
 }
 
 export default Profile
-
