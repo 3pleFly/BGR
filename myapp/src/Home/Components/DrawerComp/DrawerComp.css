@@ -1,0 +1,132 @@
+.CustomButtonOpenDrawer {
+    /* Group 6 */
+
+    position: fixed;
+    top: 41px;
+    /* תוכל לשנות את הערך לפי הצורך */
+    right: 10px;
+    /* תוכל לשנות את הערך לפי הצורך */
+    z-index: 1000;
+    /* תוודא שהוא מעל כל האלמנטים האחרים */
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.customOpenDrawerContent {
+    background-color: #765330;
+    height: 100%;
+    padding: 20px;
+    min-width: 428px;
+    /* ניתן לשנות את הערכים לפי הצורך */
+}
+
+.customButtonForMainPage {
+    /* דף הבית */
+
+    position: absolute;
+    width: 252px !important;
+    height: 77px !important;
+    left: 85px !important;
+    top: 267px !important;
+
+    font-family: 'Greta Text H+L' !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    font-size: 40px !important;
+    line-height: 48px !important;
+    text-align: center !important;
+
+    color: #F2F0E8 !important;
+
+
+}
+
+
+
+.hiddenButton {
+    background: none;
+    border: none;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+
+
+
+.customRectangle1 {
+
+
+
+
+    position: absolute;
+    width: 350px !important;
+    height: 3px !important;
+    left: 39px !important;
+    top: 410px !important;
+
+    background: #F2F0E8 !important;
+
+}
+
+.customRectangle2 {
+
+    /* Rectangle 22 */
+
+    position: absolute;
+    width: 350px !important;
+    height: 3px !important;
+    left: 39px !important;
+    top: 622px !important;
+
+    background: #F2F0E8 !important;
+}
+
+.customButtonForContactUs {
+    /* צור קשר */
+
+    position: absolute;
+    width: 252px !important;
+    height: 77px !important;
+    left: 85px !important;
+    top: 479px !important;
+
+    font-family: 'Greta Text H+L' !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    font-size: 40px !important;
+    line-height: 48px !important;
+    text-align: center !important;
+
+    color: #F2F0E8 !important;
+
+
+}
+
+.customButtonForAccessibilityStatement {
+    /* הצהרת נגישות */
+
+    position: absolute;
+    width: 252px !important;
+    height: 77px !important;
+    left: 85px !important;
+    top: 691px !important;
+
+    font-family: 'Greta Text H+L' !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    font-size: 40px !important;
+    line-height: 48px !important;
+    text-align: center !important;
+
+    color: #F2F0E8 !important;
+
+
+}

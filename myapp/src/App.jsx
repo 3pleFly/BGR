@@ -5,6 +5,8 @@ import './App.css'
 import HomeComp from "./Home/Home";
 import { Route, Routes } from "react-router-dom";
 import FullProfileComp from "./Home/Profile/FullProfile";
+import ContactPage from "./Pages/ContactPage/ContactPage";
+import AccessibilityPage from "./Pages/AccessibilityPage/AccessibilityPage";
 
 function App() {
   // const users = useSelector((state) => state.users.users);
@@ -26,6 +28,8 @@ function App() {
         {/* Dynamic Routing - Params */}
         <Route path='/' element={<HomeComp />} />
         <Route path='/profile/:profileId' element={<FullProfileComp />} />
+        <Route path='/contact' element={<ContactPage />} />
+        <Route path='/accessibility' element={<AccessibilityPage />} />
       </Routes>
 
 

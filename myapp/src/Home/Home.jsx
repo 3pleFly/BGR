@@ -9,6 +9,7 @@ import { useState } from "react";
 import MainPage from "./Components/MainPage";
 import AboutPage from "./Components/AboutPage";
 import ProjectsComp from "./Components/Projects";
+import DrawerComp from "./Components/DrawerComp/DrawerComp";
 
 
 const HomeComp = () => {
@@ -33,56 +34,20 @@ const HomeComp = () => {
     };
 
     return (
-        <div>
-
-            <button className="CustomButtonOpenDrawer" onClick={toggleDrawer(true)}>
-                <img src={'/Images/Icons/OpenDrawer.png'} alt="Open Drawer" />
-            </button>
+        <div className="container">
 
 
-            <Drawer open={openDrawer} anchor={'right'} onClose={toggleDrawer(false)} >
-                <div className="customOpenDrawerContent">
-                    <br /><br /><br /><br />
-                    <button className="hiddenButton" onClick={() => setSelectedComponent('AboutPage')}>
-                        <Typography sx={{ fontSize: '30px', color: '#F2F0E8', textAlign: 'center' }}>
+            <DrawerComp />
 
-                            אודות
+            {/* </div> */}
 
-                        </Typography>
-                    </button>
-                    <br />
-                    <div className="customRectangle"></div>
-                    <br />
-                    <button className="hiddenButton" onClick={() => setSelectedComponent('MainPage')}>
-                        <Typography sx={{ fontSize: '30px', color: '#F2F0E8', textAlign: 'center' }}>
-                            קצת עלינו
-                        </Typography>
-                    </button>
-                    <br />
-                    <div className="customRectangle"></div>
-                    <br />
-                    <button className="hiddenButton" onClick={() => setSelectedComponent('ProjectsPage')}>
-                        <Typography sx={{ fontSize: '30px', color: '#F2F0E8', textAlign: 'center' }}>
-                            טעימה מהפרויקטים שלנו
-                        </Typography>
-                    </button>
-                    <br />
-                    <div className="customRectangle"></div>
-                    <br />
-                    <button className="hiddenButton">
-                        <Typography sx={{ fontSize: '30px', color: '#F2F0E8', textAlign: 'center' }}>
-                            מידע טכני
-                        </Typography>
-                    </button>
-                </div>
-            </Drawer>
 
             {/* <LanguageAndAccessibility /> */}
-
+            {/* <div className="contentWrapper"> */}
             {
                 renderComponent()
             }
-
+            {/* </div> */}
 
 
 

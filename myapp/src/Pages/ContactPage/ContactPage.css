@@ -1,0 +1,15 @@
+.customContactPageLogo {
+    /* צבע חום על בז- הנבחר 2 */
+
+    position: absolute;
+    width: 376px !important;
+    height: 175px !important;
+    left: 533px !important;
+    top: 100px !important;
+
+}
+
+.mymap {
+    width: 600px;
+    height: 450px;
+}
