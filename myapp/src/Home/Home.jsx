@@ -36,8 +36,9 @@ const HomeComp = () => {
         <div>
 
             <button className="CustomButtonOpenDrawer" onClick={toggleDrawer(true)}>
-                <img src={'/Images/Icons/OpenDrawer.png'} alt="Icon to continue reading" />
+                <img src={'/Images/Icons/OpenDrawer.png'} alt="Open Drawer" />
             </button>
+
 
             <Drawer open={openDrawer} anchor={'right'} onClose={toggleDrawer(false)} >
                 <div className="customOpenDrawerContent">

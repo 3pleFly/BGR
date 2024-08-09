@@ -57,5 +57,11 @@
         }
     ],
     "Icon_Back": "./../Images/Profile/Icon_Back.png",
-    "Icon_Continue_Reading": "./../Images/Profile/Icon_Continue_Reading.png"
+    "Icon_Continue_Reading": "./../Images/Profile/Icon_Continue_Reading.png",
+    "imageMeetingOfficeOutside": "./../Images/Profile/MeetingOfficeOutside.png",
+    "imageMeetingOffice": "./../Images/Profile/MeetingOffice.png",
+    "imageAllWorkers": "./../Images/Profile/allWorkers.png",
+    "TitleContactDetails": {
+        "ImageLogoSmall": "./../Images/Profile/BGRLogoSmall.png"
+    }
 }

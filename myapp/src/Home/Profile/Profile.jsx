@@ -22,7 +22,7 @@ const Profile = ({ profileId, image_Profile, imageProfileLogo, en_name, heb_name
 
     return (
         <div>
-            <div style={{ display: 'flex' }}>
+            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                 <div>
                     <img src={imageProfileLogo} alt="Image Profile logo" className='customImageProfileLogo' />
                     <Typography className='customNameEn'>{en_name}</Typography>
