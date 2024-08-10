@@ -1,28 +1,16 @@
 import React, { useState } from 'react';
-import imageBGR_B from './../../Images/BGR_B.png';
-import imageBGR_G from './../../Images/BGR_G.png';
-import imageBGR_R from './../../Images/BGR_R.png';
 import './Logo.css';
+import jsonProfile from './../../Data/Profile.json'
 
 const LogoComp = () => {
-    const [isHovered, setIsHovered] = useState(false);
 
     return (
         // <div style={{ display: 'flex', justifyContent: 'center',textAlign:'center', alignItems: 'center', height:'60vh' }}>
-        <div>
-            <button className={`CustomButton_BGR_B ${isHovered ? 'move-CustomButton_BGR_B ' : ''}`}>
-                <img src={imageBGR_B} alt="Custom Button B" />
-            </button>
-            <button
-                className='CustomButton_BGR_G'
-                onMouseEnter={() => setIsHovered(true)}
-                onMouseLeave={() => setIsHovered(false)}
-            >
-                <img src={imageBGR_G} alt="Custom Button G" />
-            </button>
-            <button className={`CustomButton_BGR_R ${isHovered ? 'move-CustomButton_BGR_R ' : ''}`}>
-                <img src={imageBGR_R} alt="Custom Button R" />
-            </button>
+        <div style={{ position: 'relative' }}>
+            <img className='customMainLogoBGR' src={jsonProfile.MainLogo.LogoBGR} alt="Image logo B" />
+            <img className='customMainsubLogo1' src={jsonProfile.MainLogo.SubLogo1} alt="Image logo R" />
+            <text className='customMainsubLogo2'>מיסוי מקרקעין מסים עקיפים ומס הכנסה</text>
+            <img className='customMainIconDown' src={jsonProfile.MainLogo.IconDown} alt="Image for scroll down" />
         </div>
     );
 }

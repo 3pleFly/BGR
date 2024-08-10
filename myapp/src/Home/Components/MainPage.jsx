@@ -14,20 +14,21 @@ const MainPage = () => {
         <div>
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                 <div>
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
                     <div style={{ textAlign: 'center' }}>
+
                         <LogoComp />
-                        <br />
-                        <br />
-                        <SubtitleComp />
-                        <ArrowDownComp />
+
                         <br /><br /><br /><br /><br />
+                        <br /><br /><br /><br /><br />
+                        <br /><br /><br /><br /><br />
+                        <br /><br /><br /><br /><br />
+                        <br /><br /><br /><br /><br />
+                        <br /><br /><br /><br /><br />
+                        <br /><br /><br /><br /><br />
+                        <br /><br /><br /><br /><br />       
+                        <br /><br /><br /><br /><br />
+                        <br /><br /><br /><br /><br />
+
                     </div>
                     <ProfilesComp />
 

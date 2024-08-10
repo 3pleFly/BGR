@@ -1,4 +1,9 @@
 {
+    "MainLogo": {
+        "LogoBGR": "./../Images/Logo/LogoBGR.png",
+        "SubLogo1": "./../Images/Logo/subLogo1.png",
+        "IconDown": "./../Images/Logo/IconDown.png"
+    },
     "Profile": [
         {
             "id": "1",
