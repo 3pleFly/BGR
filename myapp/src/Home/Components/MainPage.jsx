@@ -50,8 +50,9 @@ const MainPage = () => {
                     </div>
 
 
-
-                    {/* <ContractDetailsComp /> */}
+                    <br /><br /><br /><br /><br />
+                    <br /><br /><br /><br /><br /><br /><br /><br />
+                    <ContractDetailsComp />
 
 
                 </div>
