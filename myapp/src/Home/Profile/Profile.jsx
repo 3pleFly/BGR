@@ -1,11 +1,10 @@
+import { Typography } from '@mui/material'
 import React from 'react'
-import Typography from '@mui/material/Typography';
+import { useNavigate } from 'react-router-dom';
+import jsonProfile from './../../Data/Profile.json'
 import './Profile.css'
 
-import jsonProfile from './../../Data/Profile.json'
-import { useNavigate } from 'react-router-dom';
-
-const Profile = ({ profileId, image_Profile, imageProfileLogo, en_name, heb_name, typeRule, aboutPerson }) => {
+const ProfileComp = ({ profileId, image_Profile, imageProfileLogo, en_name, heb_name, typeRule, aboutPerson }) => {
 
     const navigate = useNavigate();
 
@@ -21,36 +20,26 @@ const Profile = ({ profileId, image_Profile, imageProfileLogo, en_name, heb_name
     };
 
     return (
-        <div>
-            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                <div>
-                    <img src={imageProfileLogo} alt="Image Profile logo" className='customImageProfileLogo' />
-                    <Typography className='customNameEn'>{en_name}</Typography>
-                    <Typography className='custom_AdvCPA'>{'Adv. (CPA)'}</Typography>
-                </div>
-                <img className='customImageProfile' src={image_Profile} alt="Image Profile" />
-                {/* Name: */}
-                <div>
-                    <Typography className='customNameHeb'>{heb_name}</Typography>
-                    <Typography className='customSubNameHeb'>{typeRule}</Typography>
-                    <br />
-                    <br />
-                    <Typography
-                        className='custom_textAboutPeople'
-                        dangerouslySetInnerHTML={createMarkup(aboutPerson)} />
+        <div style={{ position: 'relative' }}>
+            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '70vh' }}>
 
-                    <br />
-                    <br />
+                <img src={imageProfileLogo} alt="Image Profile logo" className='customImageProfileLogofoo' />
+                <Typography className='customNameEnfoo'>{en_name}</Typography>
+                <Typography className='custom_AdvCPAfoo'>{'Adv. (CPA)'}</Typography>
+                <img className='customImageProfilefoo' src={image_Profile} alt="Image Profile" />
+                <Typography className='customNameHebfoo'>{heb_name}</Typography>
+                <Typography className='customSubNameHebfoo'>{typeRule}</Typography>
+                <Typography
+                    className='custom_textAboutPeoplefoo'
+                    dangerouslySetInnerHTML={createMarkup(aboutPerson)} />
 
-                    <div >
-                        <div className='CustomTextContinueReading' onClick={() => moveToSpecificProfile()}>
-                            <img src={jsonProfile.Icon_Continue_Reading} alt="Icon to continue reading" style={{ cursor: 'pointer' }} />
-                        </div>
-                    </div>
+                <div className='CustomTextContinueReadingfoo' onClick={() => moveToSpecificProfile()}>
+                    <img src={jsonProfile.Icon_Continue_Reading} alt="Icon to continue reading" style={{ cursor: 'pointer' }} />
                 </div>
+
             </div>
-        </div >
+        </div>
     )
 }
 
-export default Profile
+export default ProfileComp

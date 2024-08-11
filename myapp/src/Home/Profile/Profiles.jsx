@@ -14,7 +14,7 @@ const ProfilesComp = () => {
                 jsonProfile.Profile.map((profile, key) => {
 
                     return <div key={key}>
-                        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
                         <Profile
                             profileId={profile.id}
                             image_Profile={profile.image_Profile}
@@ -26,7 +26,7 @@ const ProfilesComp = () => {
                     </div>
                 })
             }
-
+            <br /><br /><br /><br /><br /><br /><br />
             {
 
                 // Profiles without Logos:

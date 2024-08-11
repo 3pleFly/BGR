@@ -35,22 +35,10 @@ const HomeComp = () => {
 
     return (
         <div className="container">
-
-
             <DrawerComp />
-
-            {/* </div> */}
-
-
-            {/* <LanguageAndAccessibility /> */}
-            {/* <div className="contentWrapper"> */}
             {
                 renderComponent()
             }
-            {/* </div> */}
-
-
-
         </div>
     );
 }
