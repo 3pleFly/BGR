@@ -138,7 +138,10 @@
 
     color: #765330 !important;
 
-
+    direction: rtl !important;
+    /* כיוון הטקסט מימין לשמאל */
+    unicode-bidi: plaintext !important;
+    /* טיפול בכיווניות של טקסטים מורכבים */
 
 }
 

@@ -1,11 +1,12 @@
 // FullProfileComp.jsx
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import jsonProfile from '../../Data/Profile.json';
 import { Typography } from '@mui/material';
 import './FullProfile.css';
 
 const FullProfileComp = () => {
+    const navigate = useNavigate();
     const { profileId } = useParams();
     const [detailsAboutProfile, setDetailsAboutProfile] = useState({});
 
@@ -25,23 +26,29 @@ const FullProfileComp = () => {
         return { __html: formattedText };
     };
 
+    const moveToSpecificProfile = () => {
+        sessionStorage['scrollYPosition'] = window.scrollY;
+        navigate(`/`) // הכנס את ה-URL של האתר האחר
+        // sessionStorage['yAxis'] = yAxis;
+    }
+
     return (
-        <div className="outerContainer">
-            <div className="fullProfileContainer">
-                <div className='customFullProfile'>
-                    <div>
-                        <img className='customFullProfileImageProfile' src={detailsAboutProfile.image_FullProfile} alt="Image Profile" />
-                    </div>
-                    <div>
-                        <Typography className='customFullProfileNameHeb'>{detailsAboutProfile.heb_name}</Typography>
-                        <Typography className='customFullProfileSubNameHeb'>{detailsAboutProfile.typeRule}</Typography>
-                        <Typography
-                            className='customFullProfile_textAboutPeople'
-                            dangerouslySetInnerHTML={createMarkup(detailsAboutProfile.aboutPersonFullProfile)}
-                        />
-                    </div>
+        <div style={{ position: 'relative' }}>
+            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', textAlign: 'center' }}>
+                <img className='customFullProfileImageProfile' src={detailsAboutProfile.image_FullProfile} alt="Image Profile" />
+                <Typography className='customFullProfileNameHeb'>{detailsAboutProfile.heb_name}</Typography>
+                <Typography className='customFullProfileSubNameHeb'>{detailsAboutProfile.typeRule}</Typography>
+                <Typography
+                    className='customFullProfile_textAboutPeople'
+                    dangerouslySetInnerHTML={createMarkup(detailsAboutProfile.aboutPersonFullProfile)}
+                />
+                <div className='CustomIconBack' onClick={() => moveToSpecificProfile()}>
+                    <img src={jsonProfile.Icon_Back} alt="Icon back to main" style={{ cursor: 'pointer' }} />
                 </div>
             </div>
+
+
+
         </div>
     );
 };

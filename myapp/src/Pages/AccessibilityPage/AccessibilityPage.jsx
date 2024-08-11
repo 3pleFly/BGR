@@ -8,6 +8,7 @@ const AccessibilityPage = () => {
     return (
         <div>
             <DrawerComp />
+            <Typography className='customAccessibilityStatementTitle'>{'הצהרת נגישות'}</Typography>
             <Typography className='customAccessibilityStatement'>{jsonProfile.forAccessibilityPage.accessibilityStatement}</Typography>
         </div>
     )

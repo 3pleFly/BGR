@@ -1,15 +1,169 @@
 .customContactPageLogo {
     /* צבע חום על בז- הנבחר 2 */
 
+    /* צבע חום על בז- הנבחר 4 */
+
     position: absolute;
-    width: 376px !important;
-    height: 175px !important;
-    left: 533px !important;
-    top: 100px !important;
+    width: 389px !important;
+    height: 174px !important;
+    left: 541px !important;
+    top: 157px !important;
+
+
 
 }
 
-.mymap {
-    width: 600px;
-    height: 450px;
+.customContactPageSubLogo {
+    /* צבע חום על בז- הנבחר 3 */
+
+    position: absolute;
+    width: 363px !important;
+    height: 77px !important;
+    left: 554px !important;
+    top: 344px !important;
+
+
+}
+
+.customContactPageSubLogoContext {
+    /* מיסוי מקרקעין מסים עקיפים ומס הכנסה */
+
+    position: absolute;
+    width: 363px !important;
+    height: 19px !important;
+    left: 554px !important;
+    top: 419px !important;
+
+    font-family: 'Greta Text H+L' !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    font-size: 15px !important;
+    line-height: 18px !important;
+    text-align: center !important;
+
+    color: #765330 !important;
+
+
+}
+
+
+
+.customContactPageContextOffice {
+    /* משרד: מגדל הכשרת-היישוב. קומה 27. רח' ז'בוטינסקי 9 בני ברק */
+
+    position: absolute;
+    width: 961px !important;
+    height: 36px!important;
+    left: 356px!important;
+    top: 542px!important;
+
+    font-family: 'Greta Text H+L'!important;
+    font-style: normal!important;
+    font-weight: 680!important;
+    font-size: 40px!important;
+    line-height: 48px!important;
+    text-align: right!important;
+
+    color: #765330!important;
+
+
+}
+
+.customContactPageContextPost {
+    /* דואר: ת.ד 2163, בני ברק, ישראל, 5112101 */
+
+    position: absolute;
+    width: 657px!important;
+    height: 33px!important;
+    left: 660px!important;
+    top: 613px!important;
+
+    font-family: 'Greta Text H+L'!important;
+    font-style: normal!important;
+    font-weight: 680!important;
+    font-size: 40px!important;
+    line-height: 48px!important;
+    text-align: right!important;
+
+    color: #765330!important;
+
+}
+
+.customContactPageContextEmail {
+    /* מייל: BGR@gmail.com */
+
+    position: absolute;
+    width: 424px!important;
+    height: 35px!important;
+    left: 903px!important;
+    top: 681px!important;
+
+    font-family: 'Greta Text H+L'!important;
+    font-style: normal!important;
+    font-weight: 680!important;
+    font-size: 40px!important;
+    line-height: 48px!important;
+    text-align: right!important;
+
+    color: #765330!important;
+
+    direction: rtl !important;
+    /* כיוון הטקסט מימין לשמאל */
+    unicode-bidi: plaintext !important;
+    /* טיפול בכיווניות של טקסטים מורכבים */
+
+
+}
+
+.customContactPageContextPhone {
+    /* טלפון: 972.3.6544.303+ */
+
+    position: absolute;
+    width: 412px!important;
+    height: 33px!important;
+    left: 915px!important;
+    top: 751px!important;
+
+    font-family: 'Greta Text H+L'!important;
+    font-style: normal!important;
+    font-weight: 680!important;
+    font-size: 40px!important;
+    line-height: 48px!important;
+    text-align: right!important;
+
+    color: #765330!important;
+    
+    direction: rtl !important;
+    /* כיוון הטקסט מימין לשמאל */
+    unicode-bidi: plaintext !important;
+    /* טיפול בכיווניות של טקסטים מורכבים */
+
+
+
+}
+
+
+.customContactPageContextFax {
+    /* פקס: 972.3.6544.307+ */
+
+    position: absolute;
+    width: 391px!important;
+    height: 34px!important;
+    left: 936px!important;
+    top: 819px!important;
+
+    font-family: 'Greta Text H+L'!important;
+    font-style: normal!important;
+    font-weight: 680!important;
+    font-size: 40px!important;
+    line-height: 48px!important;
+    text-align: right!important;
+
+    color: #765330!important;
+
+        direction: rtl !important;
+    /* כיוון הטקסט מימין לשמאל */
+    unicode-bidi: plaintext !important;
+    /* טיפול בכיווניות של טקסטים מורכבים */
+
 }
