@@ -9,13 +9,14 @@ import ContactPage from "./Pages/ContactPage/ContactPage";
 import AccessibilityPage from "./Pages/AccessibilityPage/AccessibilityPage";
 import { useMediaQuery } from 'react-responsive';
 import MobileHomeComp from "./Mobile/HomePageMobile/MobileHomeComp";
+import MainPage from "./Home/Components/MainPage";
 
 function App() {
 
   const isDesktop = useMediaQuery({ minWidth: 769 });
 
   return (
-    <div>
+    <div style={{ display: "flex" }}>
 
 
       <Routes>

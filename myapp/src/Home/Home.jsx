@@ -9,6 +9,7 @@ import MainPage from "./Components/MainPage";
 import AboutPage from "./Components/AboutPage";
 import ProjectsComp from "./Components/Projects";
 import DrawerComp from "./Components/DrawerComp/DrawerComp";
+import ContractDetailsComp from "./Components/ContractDetails/ContractDetails";
 
 const HomeComp = () => {
     const [openDrawer, setOpenDrawer] = useState(false);
@@ -19,14 +20,22 @@ const HomeComp = () => {
     };
 
     return (
-        <div style={{ display: 'grid', placeItems: 'center', minHeight: '100vh' }}>
+        <div >
             <DrawerComp />
-            <div style={{ 
-                width: '100%',
-                maxWidth: '1200px',  // ניתן להתאים את הרוחב המקסימלי לפי הצורך
-            }}>
+            
+            <div style={{ display: 'flex', position: 'relative' }}>
                 <MainPage />
             </div>
+
+            <div>
+                <ContractDetailsComp />
+            </div>
+
+
+
+
+
+
         </div>
     );
 }

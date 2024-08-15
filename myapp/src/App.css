@@ -1,16 +1,4 @@
 body {
     background-color: #F2F0E8;
     overflow-y: scroll;
-    /* position: relative; */
-    /* width: 1440px;
-    height: 1024px; */
-    /* scroll-behavior: smooth; */
-}
-
-.column {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid black;
 }

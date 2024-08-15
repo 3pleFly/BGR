@@ -7,6 +7,7 @@ import jsonProfile from './../../Data/Profile.json'
 
 import './MainPage.css';
 import ContractDetailsComp from './ContractDetails/ContractDetails'
+import DrawerComp from './DrawerComp/DrawerComp'
 
 
 const MainPage = () => {
@@ -54,6 +55,8 @@ const MainPage = () => {
                     {/* <ContractDetailsComp /> */}
                 </div>
             </div>
+
+
         </div>
     )
 }
