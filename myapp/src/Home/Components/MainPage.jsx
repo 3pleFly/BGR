@@ -25,9 +25,6 @@ const MainPage = () => {
                         <br /><br /><br /><br /><br />
                         <br /><br /><br /><br /><br />
                         <br /><br /><br /><br /><br />
-                        <br /><br /><br /><br /><br />
-                        <br /><br /><br /><br /><br />
-                        <br /><br /><br /><br /><br />
 
                     </div>
                     <ProfilesComp />
@@ -52,9 +49,9 @@ const MainPage = () => {
 
                     <br /><br /><br /><br /><br />
                     <br /><br /><br /><br /><br /><br /><br /><br />
-                    <ContractDetailsComp />
 
 
+                    {/* <ContractDetailsComp /> */}
                 </div>
             </div>
         </div>
