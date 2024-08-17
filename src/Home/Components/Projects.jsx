@@ -23,15 +23,15 @@ const ProjectsComp = () => {
                         <br /><br />
 
                         <button>
-                            <img src={'/Images/ProjectsPage/project1.png'} alt="Custom Button B" />
+                            <img src={'/assets/images/ProjectsPage/project1.png'} alt="Custom Button B" />
 
                         </button>
                         <button>
-                            <img src={'/Images/ProjectsPage/project1.png'} alt="Custom Button B" />
+                            <img src={'/assets/images/ProjectsPage/project1.png'} alt="Custom Button B" />
 
                         </button>
                         <button>
-                            <img src={'/Images/ProjectsPage/project1.png'} alt="Custom Button B" />
+                            <img src={'/assets/images/ProjectsPage/project1.png'} alt="Custom Button B" />
 
                         </button>
 

@@ -1,11 +1,12 @@
 import { ButtonBase, Stack, Typography } from "@mui/material";
 import { useState } from "react";
-import jsonProfile from "./../../../Data/Profile.json";
 import { ControlledInput } from "../../../Components/ControlledInput";
 import { ControlledTextarea } from "../../../Components/ControlledTextarea";
+import { useTranslation } from "../../../Hooks/useTranslation";
 
 export const ContactForm = () => {
-  const translation = jsonProfile.forPageContact.form;
+  const translation = useTranslation();
+  const formTranslation = translation.forPageContact.form;
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -56,36 +57,36 @@ export const ContactForm = () => {
         color="primary.main"
         textAlign="center"
       >
-        {translation.title}
+        {formTranslation.title}
       </Typography>
       <Stack gap={{ mobile: "28px", tablet: "32px" }}>
         <Stack gap={{ mobile: "32px", tablet: "40px" }}>
           <ControlledInput
-            placeholder={translation.name}
+            placeholder={formTranslation.name}
             sx={{ borderColor: errors.name ? "error.main" : "primary.main" }}
             name="name"
             value={formData.name}
             onChange={handleChange}
             error={errors.name}
-            helperText={translation.required}
+            helperText={formTranslation.required}
           />
           <ControlledInput
-            placeholder={translation.phone}
+            placeholder={formTranslation.phone}
             sx={{ borderColor: errors.phone ? "error.main" : "primary.main" }}
             name="phone"
             value={formData.phone}
             onChange={handleChange}
             error={errors.phone}
-            helperText={translation.required}
+            helperText={formTranslation.required}
           />
           <ControlledTextarea
-            placeholder={translation.reason}
+            placeholder={formTranslation.reason}
             sx={{ borderColor: errors.reason ? "error.main" : "primary.main" }}
             name="reason"
             value={formData.reason}
             onChange={handleChange}
             error={errors.reason}
-            helperText={translation.required}
+            helperText={formTranslation.required}
           />
         </Stack>
         <ButtonBase
@@ -102,7 +103,7 @@ export const ContactForm = () => {
             height: { mobile: "29px", tablet: "48px" },
           }}
         >
-          {translation.send}
+          {formTranslation.send}
         </ButtonBase>
       </Stack>
     </Stack>

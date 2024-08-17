@@ -27,7 +27,7 @@ export const Header = () => {
       <ButtonBase onClick={toggleDrawer} sx={{ alignSelf: "flex-start" }}>
         <Stack
           component={"img"}
-          src={"/Images/Icons/OpenNavbar.svg"}
+          src={"/assets/images/Icons/OpenNavbar.svg"}
           alt="Open navbar"
         />
       </ButtonBase>
@@ -54,7 +54,7 @@ export const Header = () => {
         >
           <Stack
             component={"img"}
-            src={"/Images/Icons/ClosedNavbar.svg"}
+            src={"/assets/images/Icons/ClosedNavbar.svg"}
             alt="Open navbar"
           />
         </ButtonBase>

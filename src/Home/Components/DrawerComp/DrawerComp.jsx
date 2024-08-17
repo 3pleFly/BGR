@@ -13,13 +13,13 @@ const DrawerComp = () => {
         <div>
             {/* <div className="customMainRectangle"> */}
             <button className="CustomButtonOpenDrawer" onClick={toggleDrawer(true)}>
-                <img src={'/Images/Icons/OpenDrawer.png'} alt="Open Drawer" />
+                <img src={'/assets/images/Icons/OpenDrawer.png'} alt="Open Drawer" />
             </button>
             <Drawer open={openDrawer} anchor={'right'} onClose={toggleDrawer(false)} >
                 <div className="customOpenDrawerContent">
 
                     <button className="CustomButtonOpenDrawer" onClick={toggleDrawer(false)}>
-                        <img src={'/Images/Icons/CloseDrawer.png'} alt="Close Drawer" />
+                        <img src={'/assets/images/Icons/CloseDrawer.png'} alt="Close Drawer" />
                     </button>
 
 

@@ -1,7 +1,7 @@
 import { useLocation, useNavigate } from "react-router-dom";
-import jsonProfile from "./../../Data/Profile.json";
 import { Stack, Typography, Button } from "@mui/material";
-import { useCreateMarkup } from "../../Hooks/useCreateMarkup";
+import { useParseRichText } from "../../Hooks/useParseRichText";
+import { useTranslation } from "../../Hooks/useTranslation";
 
 export const ProfilePage = () => {
   const { pathname } = useLocation();
@@ -9,8 +9,9 @@ export const ProfilePage = () => {
   const profileId = pathname.split("/")[2];
 
   const navigate = useNavigate();
+  const translation = useTranslation();
 
-  const client = jsonProfile.Profile.find((p) => p.id === profileId);
+  const client = translation.Profile.find((p) => p.id === profileId);
 
   if (!client) navigate("/");
 
@@ -23,12 +24,15 @@ export const ProfilePage = () => {
     aboutPersonFullProfile,
   } = client;
 
-  const { createMarkup } = useCreateMarkup();
+  const { parseRichText } = useParseRichText();
 
   return (
     <Stack
       alignItems={"center"}
-      padding={{ mobile: "100px 38px 36px 38px", tablet: "100px 140px 40px 147px" }}
+      padding={{
+        mobile: "100px 38px 36px 38px",
+        tablet: "100px 140px 40px 147px",
+      }}
     >
       <Stack
         gap={{ mobile: "20px", tablet: "77px" }}
@@ -67,8 +71,9 @@ export const ProfilePage = () => {
             <Typography
               fontSize={{ mobile: "15px", desktop: "30px" }}
               color={"primary.main"}
-              dangerouslySetInnerHTML={createMarkup(aboutPersonFullProfile)}
-            />
+            >
+              {parseRichText(aboutPersonFullProfile)}
+            </Typography>
           </Stack>
           <Stack
             width={{ mobile: "auto", tablet: "50%" }}
@@ -81,8 +86,8 @@ export const ProfilePage = () => {
                 backgroundImage: `url(${image_FullProfile})`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
-                width: { mobile: "175px", tablet: "360px",laptop:"460px" },
-                height: { mobile: "264px", tablet: "570px",laptop:"670px" },
+                width: { mobile: "175px", tablet: "360px", laptop: "460px" },
+                height: { mobile: "264px", tablet: "570px", laptop: "670px" },
                 position: "relative",
                 left: { mobile: "0px", tablet: "initial" },
               }}
@@ -110,7 +115,7 @@ export const ProfilePage = () => {
           onClick={() => navigate(window.history.length < 3 ? "/" : -1)}
           sx={{
             alignSelf: "flex-start",
-            backgroundImage: `url('/Images/Icons/Back.svg')`,
+            backgroundImage: `url('/assets/images/Icons/Back.svg')`,
             backgroundSize: "cover",
             backgroundPosition: "center",
             width: { mobile: "50px", desktop: "97px" },

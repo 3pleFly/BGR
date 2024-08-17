@@ -1,5 +1,5 @@
 import React from 'react'
-import imageSubtitle from '/Images/Brown color on beige-the chosen 3.png';
+import imageSubtitle from '/assets/images/Brown color on beige-the chosen 3.png';
 import './Subtitle.css'
 import { Typography } from '@mui/material';
 

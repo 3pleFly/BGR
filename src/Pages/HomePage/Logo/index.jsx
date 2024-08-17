@@ -14,15 +14,15 @@ export const Logo = ({ handleScroll }) => {
         <Stack gap={{ mobile: "23px" }} alignItems={"center"}>
           <Stack
             component={"img"}
-            src={"/Images/Logo/logo.svg"}
+            src={"/assets/images/Logo/logo.svg"}
             alt="BGR Logo"
-            width={{ mobile: "312px", tablet: "80%", laptop: "95%" }}
+            width={{ mobile: "312px", tablet: "50%", laptop: "80%" }}
           />
           <Stack
             component={"img"}
-            src={"/Images/Logo/sub-logo.svg"}
+            src={"/assets/images/Logo/sub-logo.svg"}
             alt="Law Office, Berger.Gabai.Rechtschaffen"
-            width={{ mobile: "312px", tablet: "80%", laptop: "100%" }}
+            width={{ mobile: "312px", tablet: "50%", laptop: "50%" }}
           />
         </Stack>
         <Typography
@@ -45,7 +45,7 @@ export const Logo = ({ handleScroll }) => {
       >
         <Stack
           component={"img"}
-          src={"/Images/Logo/arrow.svg"}
+          src={"/assets/images/Logo/arrow.svg"}
           alt="Scroll"
           sx={{ width: "100%", height: "auto" }}
         />

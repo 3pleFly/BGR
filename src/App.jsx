@@ -1,5 +1,4 @@
 import { Route, Routes } from "react-router-dom";
-import FullProfileComp from "./Home/Profile/FullProfile";
 import ContactPage from "./Pages/ContactPage/ContactPage";
 import AccessibilityPage from "./Pages/AccessibilityPage/AccessibilityPage";
 import { HomePage } from "./Pages/HomePage";

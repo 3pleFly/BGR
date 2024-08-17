@@ -1,15 +1,15 @@
 {
   "MainLogo": {
-    "LogoBGR": "./../Images/Logo/LogoBGR.png",
-    "SubLogo1": "./../Images/Logo/subLogo1.png",
-    "IconDown": "./../Images/Logo/IconDown.png"
+    "LogoBGR": "/assets/images/Logo/LogoBGR.png",
+    "SubLogo1": "/assets/images/Logo/subLogo1.png",
+    "IconDown": "/assets/images/Logo/IconDown.png"
   },
   "Profile": [
     {
       "id": "1",
-      "image_Profile": "./../Images/Profile/Berger.png",
-      "image_FullProfile": "./../Images/Profile/BergerProfile.png",
-      "imageProfileLogo": "./../Images/Profile/B.png",
+      "image_Profile": "/assets/images/Profile/Berger.png",
+      "image_FullProfile": "/assets/images/Profile/BergerProfile.png",
+      "imageProfileLogo": "/assets/images/Profile/B.png",
       "en_name": "Aharon Berger",
       "heb_name": "אהרון ברגר",
       "typeRule": "עו”ד (רו”ח)",
@@ -18,9 +18,9 @@
     },
     {
       "id": "2",
-      "image_Profile": "./../Images/Profile/Gabai.png",
-      "image_FullProfile": "./../Images/Profile/GabaiProfile.png",
-      "imageProfileLogo": "./../Images/Profile/G.png",
+      "image_Profile": "/assets/images/Profile/Gabai.png",
+      "image_FullProfile": "/assets/images/Profile/GabaiProfile.png",
+      "imageProfileLogo": "/assets/images/Profile/G.png",
       "en_name": "Rafi Gabai",
       "heb_name": "רפי גבאי",
       "typeRule": "עו”ד (רו”ח)",
@@ -29,9 +29,9 @@
     },
     {
       "id": "3",
-      "image_Profile": "./../Images/Profile/yechielRechtschaffenHome.png",
-      "image_FullProfile": "./../Images/Profile/yechielRechtschaffenProfile.png",
-      "imageProfileLogo": "./../Images/Profile/R.png",
+      "image_Profile": "/assets/images/Profile/yechielRechtschaffenHome.png",
+      "image_FullProfile": "/assets/images/Profile/yechielRechtschaffenProfile.png",
+      "imageProfileLogo": "/assets/images/Profile/R.png",
       "en_name": "Yechiel Rechtschaffen",
       "heb_name": "יחיאל רכטשאפן",
       "typeRule": "עו”ד (רו”ח)",
@@ -40,8 +40,8 @@
     },
     {
       "id": "4",
-      "image_Profile": "./../Images/Profile/DannyYaffe.png",
-      "image_FullProfile": "./../Images/Profile/DannyYaffeProfile.png",
+      "image_Profile": "/assets/images/Profile/DannyYaffe.png",
+      "image_FullProfile": "/assets/images/Profile/DannyYaffeProfile.png",
       "en_name": "Danny Yaffe",
       "heb_name": "דני יפה",
       "typeRule": "עו”ד (רו”ח)",
@@ -50,8 +50,8 @@
     },
     {
       "id": "5",
-      "image_Profile": "./../Images/Profile/EffieLevkovic.png",
-      "image_FullProfile": "./../Images/Profile/EffieLevkovicProfile.png",
+      "image_Profile": "/assets/images/Profile/EffieLevkovic.png",
+      "image_FullProfile": "/assets/images/Profile/EffieLevkovicProfile.png",
       "en_name": "Effie Levkovic",
       "heb_name": "אפי לבקוביץ",
       "typeRule": "עו”ד (רו”ח)",
@@ -59,13 +59,13 @@
       "aboutPersonFullProfile": "אפרים לבקוביץ הינו רואה חשבון ותיק.\n\nאפי מנהל משרד לראיית חשבון והינו בעל ותק ארוך בניהול וייצוג לקוחות אל מול שלטונות המס.\n\nאפי שימש כמפקח מס ברשות המסים בעברו ולאחר פרישתו שימש כמנהל בכיר בפירמת רואי החשבון ליובושיץ קסירר.\n\nלאפי מומחיות גדולה בתכנון מס ללקוחות פרטיים וחברות ציבוריות."
     }
   ],
-  "Icon_Back": "./../Images/Profile/Icon_Back.png",
-  "Icon_Continue_Reading": "./../Images/Profile/Icon_Continue_Reading.png",
-  "imageMeetingOfficeOutside": "./../Images/Profile/MeetingOfficeOutside.png",
-  "imageMeetingOffice": "./../Images/Profile/MeetingOffice.png",
-  "imageAllWorkers": "./../Images/Profile/allWorkers.png",
+  "Icon_Back": "/assets/images/Profile/Icon_Back.png",
+  "Icon_Continue_Reading": "/assets/images/Profile/Icon_Continue_Reading.png",
+  "imageMeetingOfficeOutside": "/assets/images/Profile/MeetingOfficeOutside.png",
+  "imageMeetingOffice": "/assets/images/Profile/MeetingOffice.png",
+  "imageAllWorkers": "/assets/images/Profile/allWorkers.png",
   "TitleContactDetails": {
-    "ImageLogoSmall": "./../Images/Profile/BGRLogoSmall.png"
+    "ImageLogoSmall": "/assets/images/Profile/BGRLogoSmall.png"
   },
   "forPageContact": {
     "contextOffice": "מגדל הכשרת-היישוב. קומה 27. רח' ז'בוטינסקי 9 בני ברק",

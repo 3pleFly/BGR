@@ -1,18 +1,18 @@
 import { Stack } from "@mui/material";
 import { Profile } from "../../Components/Profile";
-import LogoComp from "../../Home/LOGO/LogoComp";
-import jsonProfile from "./../../Data/Profile.json";
 import { Logo } from "./Logo";
 import { useRef } from "react";
+import { useTranslation } from "../../Hooks/useTranslation";
 
 export const HomePage = () => {
   const profileRefs = useRef([]);
+  const translation = useTranslation();
 
   const handleScroll = () => {
     const element = profileRefs.current[0];
     const yOffset = -100;
     const yPosition =
-      element.getBoundingClientRect().top + window.screenY + yOffset;
+      element.getBoundingClientRect().top + window.pageYOffset + yOffset;
 
     window.scrollTo({
       top: yPosition,
@@ -33,7 +33,7 @@ export const HomePage = () => {
           desktop: "0px 107px 0px 107px",
         }}
       >
-        {jsonProfile.Profile.map((profile, i) => (
+        {translation.Profile.map((profile, i) => (
           <Profile
             key={profile.id}
             profileId={profile.id}
@@ -56,7 +56,7 @@ export const HomePage = () => {
         <Stack height={"75vh"} width={"100%"}>
           <Stack
             component={"img"}
-            src={"/Images/Profile/MeetingOfficeOutside.png"}
+            src={"/assets/images/Profile/MeetingOfficeOutside.png"}
             sx={{
               objectFit: "cover",
               width: "100%",
@@ -67,7 +67,7 @@ export const HomePage = () => {
         <Stack height={"75vh"} width={"100%"} alignItems={"flex-end"}>
           <Stack
             component={"img"}
-            src={"/Images/Profile/MeetingOffice.png"}
+            src={"/assets/images/Profile/MeetingOffice.png"}
             display={{ mobile: "none", tablet: "flex" }}
             sx={{
               objectFit: "cover",
@@ -79,7 +79,7 @@ export const HomePage = () => {
         <Stack height={"auto"} width={"100%"} alignItems={"center"}>
           <Stack
             component={"img"}
-            src={"/Images/Profile/allWorkers.png"}
+            src={"/assets/images/Profile/allWorkers.png"}
             display={{ mobile: "none", tablet: "flex" }}
             sx={{
               objectFit: "cover",

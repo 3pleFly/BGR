@@ -1,7 +1,7 @@
 import { Stack, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import jsonProfile from "./../../Data/Profile.json";
-import { useCreateMarkup } from "../../Hooks/useCreateMarkup";
+import { useParseRichText } from "../../Hooks/useParseRichText";
+import { useTranslation } from "../../Hooks/useTranslation";
 
 export const Profile = ({
   profileId,
@@ -19,7 +19,9 @@ export const Profile = ({
     navigate(`/profile/${profileId}`);
   };
 
-  const { createMarkup } = useCreateMarkup();
+  const translation = useTranslation();
+
+  const { parseRichText } = useParseRichText();
 
   return (
     <Stack
@@ -48,7 +50,7 @@ export const Profile = ({
               backgroundPosition: "center",
               width: { mobile: "130px", desktop: "380px" },
               height: { mobile: "200px", desktop: "570px" },
-              flexShrink:0,
+              flexShrink: 0,
               position: "relative",
             }}
           >
@@ -118,8 +120,9 @@ export const Profile = ({
             <Typography
               fontSize={{ mobile: "15px", desktop: "30px" }}
               color={"primary.main"}
-              dangerouslySetInnerHTML={createMarkup(aboutPerson)}
-            />
+            >
+              {parseRichText(aboutPerson)}
+            </Typography>
           </Stack>
         </Stack>
         <Stack
@@ -132,7 +135,7 @@ export const Profile = ({
           onClick={() => moveToSpecificProfile()}
         >
           <img
-            src={jsonProfile.Icon_Continue_Reading}
+            src={translation.Icon_Continue_Reading}
             alt="Icon to continue reading"
             style={{ cursor: "pointer" }}
           />

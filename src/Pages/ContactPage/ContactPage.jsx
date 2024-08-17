@@ -1,13 +1,15 @@
-import jsonProfile from "./../../Data/Profile.json";
 import { Stack, Typography } from "@mui/material";
 import { ContactForm } from "./ContactForm";
+import { useTranslation } from "../../Hooks/useTranslation";
 
 const ContactPage = () => {
+  const translation = useTranslation();
+
   const contactInfo = [
-    { label: "משרד:", info: jsonProfile.forPageContact.contextOffice },
-    { label: "דואר:", info: jsonProfile.forPageContact.contextPost },
-    { label: "מייל:", info: jsonProfile.forPageContact.contextEmail },
-    { label: "טלפון:", info: jsonProfile.forPageContact.contextPhone },
+    { label: "משרד:", info: translation.forPageContact.contextOffice },
+    { label: "דואר:", info: translation.forPageContact.contextPost },
+    { label: "מייל:", info: translation.forPageContact.contextEmail },
+    { label: "טלפון:", info: translation.forPageContact.contextPhone },
   ];
   return (
     <Stack gap={{ mobile: "72px", tablet: "" }}>
@@ -18,7 +20,7 @@ const ContactPage = () => {
       >
         <Stack
           component={"img"}
-          src={"/Images/Logo/contact-page-logo.svg"}
+          src={"/assets/images/Logo/contact-page-logo.svg"}
           alt={"RGB logo"}
           width={{ mobile: "110px", tablet: "390px" }}
         />

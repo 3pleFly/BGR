@@ -28,7 +28,7 @@ const Footer = () => {
       <Stack direction={"row"} alignItems={"center"} gap={{ mobile: "12px" }}>
         <Stack
           component={"img"}
-          src={"/Images/Profile/BGRLogoSmall.png"}
+          src={"/assets/images/Profile/BGRLogoSmall.png"}
           alt="BGR logo"
           sx={{
             width: { mobile: "150px", tablet: "300px", laptop: "auto" },

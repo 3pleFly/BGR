@@ -1,5 +1,5 @@
 import React from 'react'
-import imageArrowDown from '/Images/arrow_down.png';
+import imageArrowDown from '/assets/images/arrow_down.png';
 import './ArrowDown.css'
 
 const ArrowDownComp = () => {
