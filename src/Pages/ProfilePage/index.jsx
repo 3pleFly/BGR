@@ -2,6 +2,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { Stack, Typography, Button } from "@mui/material";
 import { useParseRichText } from "../../Hooks/useParseRichText";
 import { useTranslation } from "../../Hooks/useTranslation";
+import { Helmet } from "react-helmet-async";
 
 export const ProfilePage = () => {
   const { pathname } = useLocation();
@@ -34,6 +35,11 @@ export const ProfilePage = () => {
         tablet: "100px 140px 40px 147px",
       }}
     >
+      <Helmet>
+        <title>{en_name}</title>
+        <meta property="og:title" content={en_name} />
+        <meta name="twitter:title" content={en_name} />
+      </Helmet>
       <Stack
         gap={{ mobile: "20px", tablet: "77px" }}
         maxWidth={{ mobile: "400px", tablet: "initial" }}
@@ -96,6 +102,7 @@ export const ProfilePage = () => {
                 <Stack
                   component="img"
                   src={imageProfileLogo}
+                  aria-hidden={true}
                   alt={en_name}
                   sx={{
                     position: "absolute",

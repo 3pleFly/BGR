@@ -3,6 +3,7 @@ import { Profile } from "../../Components/Profile";
 import { Logo } from "./Logo";
 import { useRef } from "react";
 import { useTranslation } from "../../Hooks/useTranslation";
+import { Helmet } from "react-helmet-async";
 
 export const HomePage = () => {
   const profileRefs = useRef([]);
@@ -10,6 +11,8 @@ export const HomePage = () => {
 
   const handleScroll = () => {
     const element = profileRefs.current[0];
+    if (!element) return;
+
     const yOffset = -100;
     const yPosition =
       element.getBoundingClientRect().top + window.pageYOffset + yOffset;
@@ -18,10 +21,18 @@ export const HomePage = () => {
       top: yPosition,
       behavior: "smooth",
     });
+
+    console.log(element)
+    element.focus();
   };
 
   return (
     <Stack>
+      <Helmet>
+        <title>{translation.Seo.title}</title>
+        <meta property="og:title" content={translation.Seo.title} />
+        <meta name="twitter:title" content={translation.Seo.title} />
+      </Helmet>
       <Logo handleScroll={handleScroll} />
       <Stack
         component={"ul"}
@@ -57,6 +68,7 @@ export const HomePage = () => {
           <Stack
             component={"img"}
             src={"/assets/images/Profile/MeetingOfficeOutside.png"}
+            alt={"Meeting Office Outside"}
             sx={{
               objectFit: "cover",
               width: "100%",
@@ -68,6 +80,7 @@ export const HomePage = () => {
           <Stack
             component={"img"}
             src={"/assets/images/Profile/MeetingOffice.png"}
+            alt={"Meeting In Office"}
             display={{ mobile: "none", tablet: "flex" }}
             sx={{
               objectFit: "cover",
@@ -80,6 +93,7 @@ export const HomePage = () => {
           <Stack
             component={"img"}
             src={"/assets/images/Profile/allWorkers.png"}
+            alt={"All Workers"}
             display={{ mobile: "none", tablet: "flex" }}
             sx={{
               objectFit: "cover",

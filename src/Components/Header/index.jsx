@@ -24,7 +24,7 @@ export const Header = () => {
       width={"100%"}
       zIndex={1000}
     >
-      <ButtonBase onClick={toggleDrawer} sx={{ alignSelf: "flex-start" }}>
+      <ButtonBase onClick={toggleDrawer} aria-label="Open Navbar" sx={{ alignSelf: "flex-start" }}>
         <Stack
           component={"img"}
           src={"/assets/images/Icons/OpenNavbar.svg"}
@@ -46,6 +46,7 @@ export const Header = () => {
       >
         <ButtonBase
           onClick={toggleDrawer}
+          aria-label="Close Navbar"
           sx={{
             alignSelf: "flex-start",
             position: "relative",
@@ -75,6 +76,7 @@ export const Header = () => {
               />
               {i !== links.length - 1 && (
                 <Divider
+                  aria-hidden={true}
                   sx={{
                     bgcolor: "#fff",
                     width: "100%",

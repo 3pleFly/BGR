@@ -8,6 +8,11 @@ import { TranslationContext } from "../Context/TranslationContext";
  */
 
 /**
+ * @typedef {Object} Seo
+ * @property {string} title - Path to the main logo background image.
+ */
+
+/**
  * @typedef {Object} ProfileItem
  * @property {string} id - Unique identifier for the profile.
  * @property {string} image_Profile - Path to the profile image.
@@ -53,6 +58,7 @@ import { TranslationContext } from "../Context/TranslationContext";
 /**
  * @typedef {Object} TranslationData
  * @property {MainLogo} MainLogo - Main logo data.
+ * @property {Seo} Seo - Main logo data.
  * @property {ProfileItem[]} Profile - Array of profile items.
  * @property {string} Icon_Back - Path to the back icon image.
  * @property {string} Icon_Continue_Reading - Path to the continue reading icon image.

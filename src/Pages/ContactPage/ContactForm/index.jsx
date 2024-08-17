@@ -47,9 +47,11 @@ export const ContactForm = () => {
   return (
     <Stack
       component="form"
-      padding={{ mobile: "0px 18px 55px 30px", tablet: "" }}
+      padding={{ mobile: "0px 18px 0px 30px", tablet: "0px 50px 0px 0px" }}
       gap={{ mobile: "18px", tablet: "24px" }}
+      alignItems={"center"}
       onSubmit={handleSubmit}
+      width={"100%"}
     >
       <Typography
         fontSize={{ mobile: "24px", tablet: "32px" }}
@@ -59,7 +61,11 @@ export const ContactForm = () => {
       >
         {formTranslation.title}
       </Typography>
-      <Stack gap={{ mobile: "28px", tablet: "32px" }}>
+      <Stack
+        gap={{ mobile: "28px", tablet: "32px" }}
+        maxWidth={"500px"}
+        width={"100%"}
+      >
         <Stack gap={{ mobile: "32px", tablet: "40px" }}>
           <ControlledInput
             placeholder={formTranslation.name}

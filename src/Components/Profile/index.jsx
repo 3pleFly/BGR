@@ -56,6 +56,7 @@ export const Profile = ({
           >
             <Stack
               position={"absolute"}
+              aria-hidden={true}
               bottom={{ mobile: "20px", desktop: "20px" }}
               left={{
                 mobile: imageProfileLogo ? "-110px" : "-70px",
