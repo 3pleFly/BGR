@@ -1,0 +1,157 @@
+.customImageProfileLogofoo {
+    /* B 1 */
+
+    /* R 1 */
+
+    position: absolute;
+    width: 465px !important;
+    height: 467px !important;
+    left: 143px !important;
+    top: 215px !important;
+
+    background: url(R.png);
+    z-index: 1;
+
+}
+
+.customNameEnfoo {
+    /* Aharon Berger */
+
+    /* Yechiel Rechtschaffen */
+
+    position: absolute;
+    width: 461px !important;
+    height: 48px !important;
+    left: 143px !important;
+    top: 718px !important;
+
+    font-family: 'Greta Text H+L' !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    font-size: 48px !important;
+    line-height: 58px !important;
+
+    color: #765330 !important;
+
+
+
+}
+
+.custom_AdvCPAfoo {
+    /* Adv. (CPA) */
+
+    position: absolute;
+    width: 175px !important;
+    height: 35px !important;
+    left: 144px !important;
+
+    font-family: 'Greta Text H+L' !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    font-size: 36px !important;
+    line-height: 43px !important;
+
+    top: 773px !important;
+    color: #765330 !important;
+
+}
+
+.customImageProfilefoo {
+    /* יחיאל רכטשאפן 1 */
+
+    position: absolute;
+    width: 378px !important;
+    height: 568px !important;
+    left: 505px !important;
+    top: 281px !important;
+
+    background: url(יחיאל רכטשאפן.jpg);
+
+}
+
+.customNameHebfoo {
+    /* אהרון ברגר */
+
+    /* יחיאל רכטשאפן */
+
+    position: absolute;
+    width: 368px !important;
+    height: 77px !important;
+    left: 965px !important;
+    top: 281px !important;
+
+    font-family: 'Greta Text H+L' !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    font-size: 64px !important;
+    line-height: 77px !important;
+    /* identical to box height */
+    text-align: right !important;
+
+    color: #765330 !important;
+
+
+
+}
+
+.customSubNameHebfoo {
+    /* עו”ד (רו”ח) */
+
+    /* עו”ד (רו”ח) */
+
+    position: absolute;
+    width: 111px !important;
+    height: 21px !important;
+    left: 1222px !important;
+    top: 354px !important;
+
+    font-family: 'Greta Text H+L' !important;
+    font-style: normal !important;
+    font-weight: 680 !important;
+    font-size: 24px !important;
+    line-height: 29px !important;
+    text-align: right !important;
+
+    color: #765330 !important;
+
+
+
+}
+
+.custom_textAboutPeoplefoo {
+    /* אהרון ברגר הינו עו"ד ור"ח. שימש בתפקידים מרובים ברשות המסים משך כ-15 שנה וכיהן בתפקידים שונים, שהאחרון שבהם כמנהל תחום בכיר (שומה ובקורת – מע"מ ומס קניה) בהנהלת רשות המסים. אהרן מומחה בייצוג לקוחות בבתי משפט מול רשות המסים בהיבטים אזרחיים ופליליים. */
+
+    /* הרב יחיאל רכטשאפן הינו בוגר הפקולטה למשפטים והפקולטה לניהול באוניברסיטת תל אביב. ליחיאל רישיון עריכת דין ורישיון ראיית חשבון. יחיאל עוסק ביעוץ מיסוי מקרקעין מעל 25 שנה. */
+
+    position: absolute;
+    width: 387px !important;
+    height: 322px !important;
+    left: 946px !important;
+    top: 437px !important;
+
+    font-family: 'Greta Text H+L' !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    font-size: 30px !important;
+    line-height: 36px !important;
+    text-align: right !important;
+
+    color: #765330 !important;
+
+    direction: rtl !important;
+    /* כיוון הטקסט מימין לשמאל */
+    unicode-bidi: plaintext !important;
+    /* טיפול בכיווניות של טקסטים מורכבים */
+
+}
+
+.CustomTextContinueReadingfoo {
+    /* Group 30 */
+
+    position: absolute;
+    width: 194px !important;
+    height: 35px !important;
+    left: 1139px !important;
+    top: 828px !important;
+
+}

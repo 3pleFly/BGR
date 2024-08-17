@@ -1,0 +1,117 @@
+.fullProfileContainer {
+    position: relative;
+    /* Add any other styles for the container if needed */
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.customFullProfile {
+
+    display: 'flex' !important;
+    text-align: 'center' !important;
+    justify-content: 'center' !important;
+    align-items: 'center' !important;
+}
+
+
+.customFullProfileImageProfile {
+
+    /* WhatsApp Image 2024-08-07 at 16.27.20 1 */
+
+    position: absolute;
+    width: 459px !important;
+    height: 689px !important;
+    left: 147px !important;
+    top: 205px !important;
+
+
+
+}
+
+
+
+.customFullProfileNameHeb {
+
+    /* יחיאל רכטשאפן */
+
+    position: absolute;
+    width: 390px !important;
+    height: 77px !important;
+    left: 881px !important;
+    top: 205px !important;
+
+    font-family: 'Greta Text H+L' !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    font-size: 64px !important;
+    line-height: 77px !important;
+    /* identical to box height */
+    text-align: right !important;
+
+    color: #765330 !important;
+}
+
+.customFullProfileSubNameHeb {
+
+    /* עו”ד (רו”ח) */
+
+    position: absolute;
+    width: 124px !important;
+    height: 21px !important;
+    left: 1147px !important;
+    top: 276px !important;
+
+    font-family: 'Greta Text H+L' !important;
+    font-style: normal !important;
+    font-weight: 680 !important;
+    font-size: 24px !important;
+    line-height: 29px !important;
+    text-align: right !important;
+
+    color: #765330 !important;
+
+
+
+
+}
+
+.customFullProfile_textAboutPeople {
+
+    /* הרב יחיאל רכטשאפן הינו בוגר הפקולטה למשפטים והפקולטה לניהול באוניברסיטת תל אביב. ליחיאל רישיון עריכת דין ורישיון ראיית חשבון. יחיאל עוסק ביעוץ מיסוי מקרקעין מעל 25 שנה, והיה ראש תחום מיסוי מקרקעין בפירמת ראית החשבון ארנסט יאנג ישראל במשך כ-11 שנים. בעברו יחיאל היה מרצה ומתרגל של דיני מיסוי מקרקעין במכללות רמת גן, פתח תקוה, שערי משפט, והמכללה למינהל ראשל"צ ואף פרסם מספר מאמרים מקצועיים, חלקם היוו בסיס לפסיקה מאוחרת. יחיאל מומחה בחישובי המס ובייצוג יזמים ולקוחות פרטיים אל מול שלטונות המס בפרוייקטים יזמיים בעיקר התחדשות עירונית, וכן בגיבוש תכנוני-מס יצירתיים וארוכי טווח לפתרונות מס בעסקאות מורכבות, מתוך ראייה רוחבית של כלל צרכי הלקוח. ליחיאל הסמכה לרבנות והוא שימש כרב צבאי (במיל') בדרגת רב סרן. - */
+
+    position: absolute;
+    width: 588px !important;
+    height: 798px !important;
+    left: 683px !important;
+    top: 365px !important;
+
+    font-family: 'Greta Text H+L' !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    font-size: 30px !important;
+    line-height: 36px !important;
+    text-align: right !important;
+
+    color: #765330 !important;
+
+
+    direction: rtl !important;
+    /* כיוון הטקסט מימין לשמאל */
+    unicode-bidi: plaintext !important;
+    /* טיפול בכיווניות של טקסטים מורכבים */
+
+
+}
+
+.CustomIconBack {
+    /* Group 30 */
+
+    position: absolute;
+    width: 97px;
+    height: 36px;
+    left: 1327px;
+    top: 915px;
+
+
+}

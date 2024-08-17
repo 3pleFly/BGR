@@ -1,0 +1,134 @@
+/* סגנונות למכולה הכללית */
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+/* סגנונות לחלק המרכזי */
+.main-section {
+    height: 100vh;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: lightblue;
+}
+
+/* סגנונות לחלקים הנוספים שמתגלים בגלילה */
+.additional-section {
+    height: 100vh;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-top: 1px solid #ccc;
+}
+
+.big-button {
+    font-size: 50px;
+}
+
+/* סגנונות קיימים */
+
+/* סגנונות חדשים */
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    /* מכניס את הקומפוננטים למרכז הדף אנכית */
+}
+
+.center-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+.customTextOpenDrawer {
+    /* אודות */
+
+    text-align: center;
+    color: #F2F0E8;
+    font-size: 80rem;
+    ;
+    /* שנה את הערך לפי הצורך */
+
+
+}
+
+/* .hiddenButton {
+    background: none;
+    border: none;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+} */
+
+.customMainRectangle {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 124px;
+    background: #F2F0E8;
+    z-index: 1000;
+    /* מבטיח שהכותרת תישאר מעל התוכן הגולל */
+
+
+    /* Rectangle 24 */
+
+
+}
+
+.contentWrapper {
+    /* מרווח שמותאם לגובה הכותרת כדי שלא יסתיר את התוכן */
+
+}
+
+
+/* .customButtonForMainPage {
+
+
+    position: absolute;
+    width: 252px !important;
+    height: 77px !important;
+    left: 85px !important;
+    top: 267px !important;
+
+    font-family: 'Greta Text H+L' !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    font-size: 40px !important;
+    line-height: 48px !important;
+    text-align: center !important;
+
+    color: #F2F0E8 !important;
+
+
+} */
+
+
+
+
+
+
+

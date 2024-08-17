@@ -1,0 +1,54 @@
+.customMainLogoBGR {
+    /* צבע חום על בז- הנבחר 3 */
+
+    position: absolute;
+    width: 1021px !important;
+    height: 456px !important;
+    left: 209px !important;
+    top: 80px !important;
+
+}
+
+.customMainsubLogo1 {
+    /* צבע חום על בז- הנבחר 3 */
+
+    position: absolute;
+    width: 751px !important;
+    height: 160px !important;
+    left: 352px !important;
+    top: 557px !important;
+
+}
+
+.customMainsubLogo2 {
+    /* מיסוי מקרקעין מסים עקיפים ומס הכנסה */
+
+    position: absolute;
+    width: 749px !important;
+    height: 40px !important;
+    left: 354px !important;
+    top: 711px !important;
+
+    font-family: 'Greta Text H+L' !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    font-size: 36px !important;
+    line-height: 43px !important;
+    text-align: center !important;
+
+    color: #765330 !important;
+
+
+}
+
+.customMainIconDown {
+    /* Frame 17 */
+
+    position: absolute;
+    width: 26px !important;
+    height: 26px !important;
+    left: 694px !important;
+    top: 860px !important;
+
+
+}

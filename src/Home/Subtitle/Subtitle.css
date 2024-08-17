@@ -1,0 +1,30 @@
+.customSubtitle {
+    /* צבע חום על בז- הנבחר 3 */
+
+    /* position: absolute;
+    width: 987px;
+    height: 229px;
+    left: 218px;
+    top: 679px; */
+
+    /* background: url(צבע חום על בז- הנבחר.png); */
+
+}
+
+.customSubtitle2 {
+    /* מיסוי מקרקעין מסים עקיפים ומס הכנסה */
+
+
+
+
+    font-family: 'Greta Text H+L' !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    font-size: 36px !important;
+    line-height: 43px !important;
+    text-align: center !important;
+
+    color: #765330 !important;
+
+
+}

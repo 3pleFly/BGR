@@ -1,0 +1,53 @@
+.CustomAccessibility {
+    position: fixed;
+    width: 80px;
+    height: 80px;
+    left: 75px;
+    top: 40px;
+    background: url('./../../Images/Accessibility button.png') no-repeat center center;
+    background-size: contain;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.CustomAccessibility:hover {
+    background: url('./../../Images/Accessibility button - Hover.png') no-repeat center center;
+    background-size: contain;
+}
+
+.CustomLanguageEnglish {
+    position: fixed;
+    width: 80px;
+    height: 80px;
+    left: 181px;
+    top: 40px;
+    background: url('./../../Images/English button.png') no-repeat center center;
+    background-size: contain;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.CustomLanguageEnglish:hover {
+    background: url('./../../Images/English button - Hover.png') no-repeat center center;
+    background-size: contain;
+}
+
+.CustomLanguageHebrew {
+    position: fixed;
+    width: 80px;
+    height: 80px;
+    left: 287px;
+    top: 40px;
+    background: url('./../../Images/Hebrew Button.png') no-repeat center center;
+    background-size: contain;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.CustomLanguageHebrew:hover {
+    background: url('./../../Images/Hebrew Button - Hover.png') no-repeat center center;
+    background-size: contain;
+}
