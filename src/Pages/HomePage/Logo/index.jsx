@@ -16,19 +16,29 @@ export const Logo = ({ handleScroll }) => {
             component={"img"}
             src={"/assets/images/Logo/logo.svg"}
             alt="BGR Logo"
-            width={{ mobile: "312px", tablet: "50%", laptop: "80%" }}
+            width={{
+              mobile: "312px",
+              tablet: "30%",
+              laptop: "30%",
+              desktop: "60%",
+            }}
           />
           <Stack
             component={"img"}
             src={"/assets/images/Logo/sub-logo.svg"}
             alt="Law Office, Berger.Gabai.Rechtschaffen"
-            width={{ mobile: "312px", tablet: "50%", laptop: "50%" }}
+            width={{
+              mobile: "312px",
+              tablet: "30%",
+              laptop: "30%",
+              desktop: "60%",
+            }}
           />
         </Stack>
         <Typography
           textAlign={"center"}
           color={"primary.main"}
-          fontSize={{ mobile: "14px", tablet: "36px" }}
+          fontSize={{ mobile: "14px", desktop: "36px" }}
         >
           מיסוי מקרקעין מסים עקיפים ומס הכנסה
         </Typography>
@@ -36,7 +46,12 @@ export const Logo = ({ handleScroll }) => {
       <ButtonBase
         onClick={handleScroll}
         sx={{
-          width: { mobile: "22px", tablet: "32px", laptop: "48px" },
+          width: {
+            mobile: "22px",
+            tablet: "24px",
+            laptop: "24px",
+            large: "30px",
+          },
           position: "relative",
           bottom: { mobile: "32px", tablet: "60px" },
           alignSelf: "center",

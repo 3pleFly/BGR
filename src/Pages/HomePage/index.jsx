@@ -1,4 +1,4 @@
-import { Stack } from "@mui/material";
+import { Stack, useMediaQuery, useTheme } from "@mui/material";
 import { Profile } from "../../Components/Profile";
 import { Logo } from "./Logo";
 import { useRef } from "react";
@@ -9,11 +9,14 @@ export const HomePage = () => {
   const profileRefs = useRef([]);
   const translation = useTranslation();
 
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("tablet"));
+
   const handleScroll = () => {
     const element = profileRefs.current[0];
     if (!element) return;
 
-    const yOffset = -100;
+    const yOffset = isMobile ? -100 : -10;
     const yPosition =
       element.getBoundingClientRect().top + window.pageYOffset + yOffset;
 
@@ -22,7 +25,7 @@ export const HomePage = () => {
       behavior: "smooth",
     });
 
-    console.log(element)
+    console.log(element);
     element.focus();
   };
 
@@ -37,11 +40,11 @@ export const HomePage = () => {
       <Stack
         component={"ul"}
         margin={"0px"}
-        gap={{ mobile: "12px", tablet: "32px" }}
-        bgcolor={{ mobile: "primary.main", desktop: "primary.light" }}
+        gap={{ mobile: "12px", tablet: "32px", desktop: "300px" }}
+        bgcolor={{ mobile: "primary.main", tablet: "primary.light" }}
         padding={{
           mobile: "35px 13px 56px 13px",
-          desktop: "0px 107px 0px 107px",
+          desktop: "0px 50px 0px 90px",
         }}
       >
         {translation.Profile.map((profile, i) => (
@@ -60,7 +63,7 @@ export const HomePage = () => {
       </Stack>
       <Stack
         display={{ mobile: "none", tablet: "flex" }}
-        padding={"20px 44px 55px 44px"}
+        padding={"400px 44px 55px 44px"}
         alignItems={"center"}
         gap={"40px"}
       >

@@ -11,7 +11,7 @@ export const theme = createTheme({
         direction: "rtl",
         values: {
             mobile: 0,
-            tablet: 768,
+            tablet: 625,
             laptop: 900,
             desktop: 1439,
             large: 1536,

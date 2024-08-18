@@ -19,7 +19,7 @@ export const Header = () => {
   return (
     <Stack
       position={"fixed"}
-      padding={{ mobile: "15px 20px 15px 20px", tablet: "20px 34px 0px 34px" }}
+      padding={{ mobile: "15px 20px 15px 20px", tablet: "10px 34px 10px 34px" }}
       bgcolor={"primary.light"}
       width={"100%"}
       zIndex={1000}
