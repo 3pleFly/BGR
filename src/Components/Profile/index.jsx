@@ -63,6 +63,7 @@ export const Profile = ({
                 width: { mobile: "130px", laptop: "180px", desktop: "380px" },
                 height: { mobile: "200px", laptop: "300px", desktop: "570px" },
                 flexShrink: 0,
+                borderRadius: "14px",
                 position: "relative",
               }}
             >
