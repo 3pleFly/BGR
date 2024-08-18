@@ -20,11 +20,8 @@ steps:
     npm run build
   displayName: 'npm install and build'
 
-- task: AzureFileCopy@6
+- task: PublishBuildArtifacts@1
   inputs:
-    SourcePath: '/**/*'
-    azureSubscription: 'Azure subscription 1 (f2c2add5-8fa3-4f3a-8526-02120ffe560c)'
-    Destination: 'AzureBlob'
-    storage: 'websitebgr'
-    ContainerName: '$web'
-    BlobPrefix: '/'
+    PathtoPublish: '$(Build.SourcesDirectory)/$(buildArtifactPath)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
