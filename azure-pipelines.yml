@@ -9,6 +9,9 @@ trigger:
 pool:
   name: 'Azure Pipelines'
 
+variables:
+  buildArtifactPath: 'build'
+  
 steps:
 - task: NodeTool@0
   inputs:
