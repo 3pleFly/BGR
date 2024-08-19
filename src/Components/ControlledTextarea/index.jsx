@@ -9,6 +9,7 @@ export const ControlledTextarea = ({
   onChange,
   error,
   helperText,
+  inputRef,
 }) => {
   const errorId = useId();
 
@@ -35,7 +36,7 @@ export const ControlledTextarea = ({
           },
           ":focus": {
             outline: "1px solid",
-            outlineColor: "primary.main",
+            outlineColor: error ? "error.main" : "primary.main",
           },
           ...sx,
         },
@@ -43,6 +44,7 @@ export const ControlledTextarea = ({
     >
       <textarea
         id={name}
+        ref={inputRef}
         aria-invalid={!!error}
         aria-describedby={error ? errorId : undefined}
         aria-label={placeholder}

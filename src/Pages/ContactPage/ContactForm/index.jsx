@@ -1,5 +1,5 @@
 import { Button, Stack, Typography } from "@mui/material";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { ControlledInput } from "../../../Components/ControlledInput";
 import { ControlledTextarea } from "../../../Components/ControlledTextarea";
 import { useTranslation } from "../../../Hooks/useTranslation";
@@ -7,6 +7,9 @@ import { useTranslation } from "../../../Hooks/useTranslation";
 export const ContactForm = () => {
   const translation = useTranslation();
   const formTranslation = translation.forPageContact.form;
+
+  const inputRefs = useRef([]);
+
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -38,9 +41,14 @@ export const ContactForm = () => {
     setErrors(newErrors);
 
     const hasErrors = Object.values(newErrors).some((error) => error);
+
     if (!hasErrors) {
       // Handle form submission
       console.log("Form submitted:", formData);
+    } else {
+      if (newErrors.name) inputRefs.current[0]?.focus();
+      else if (newErrors.phone) inputRefs.current[1]?.focus();
+      else newErrors.reason && inputRefs.current[2]?.focus();
     }
   };
 
@@ -69,6 +77,7 @@ export const ContactForm = () => {
         <Stack gap={{ mobile: "32px", tablet: "40px" }}>
           <ControlledInput
             placeholder={formTranslation.name}
+            inputRef={(ref) => (inputRefs.current[0] = ref)}
             sx={{ borderColor: errors.name ? "error.main" : "primary.main" }}
             name="name"
             value={formData.name}
@@ -78,6 +87,7 @@ export const ContactForm = () => {
           />
           <ControlledInput
             placeholder={formTranslation.phone}
+            inputRef={(ref) => (inputRefs.current[1] = ref)}
             sx={{ borderColor: errors.phone ? "error.main" : "primary.main" }}
             name="phone"
             value={formData.phone}
@@ -86,6 +96,7 @@ export const ContactForm = () => {
             helperText={formTranslation.required}
           />
           <ControlledTextarea
+            inputRef={(ref) => (inputRefs.current[2] = ref)}
             placeholder={formTranslation.reason}
             sx={{ borderColor: errors.reason ? "error.main" : "primary.main" }}
             name="reason"
@@ -97,19 +108,13 @@ export const ContactForm = () => {
         </Stack>
         <Button
           type="submit"
+          variant={"primary"}
           sx={{
-            minWidth: "0px",
-            minHeight: "0px",
             alignSelf: "flex-end",
-            bgcolor: "primary.main",
-            color: "primary.light",
-            borderRadius: "15px",
-            fontSize: { mobile: "16px", tablet: "30px" },
-            fontWeight: 600,
-            alignItems: "center",
-            justifyContent: "center",
             width: "78px",
             height: { mobile: "29px", tablet: "48px" },
+            fontSize: { mobile: "16px", tablet: "24px" },
+            fontWeight: 600,
           }}
         >
           {formTranslation.send}

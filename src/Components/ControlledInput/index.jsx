@@ -8,6 +8,7 @@ export const ControlledInput = ({
   value,
   onChange,
   error,
+  inputRef,
   helperText,
 }) => {
   const errorId = useId();
@@ -15,15 +16,18 @@ export const ControlledInput = ({
   return (
     <Stack spacing={1} position={"relative"}>
       <TextField
-        id={name}
-        aria-invalid={!!error}
-        aria-describedby={error ? errorId : undefined}
-        aria-label={placeholder}
+        inputRef={inputRef}
         autoComplete={"off"}
         placeholder={placeholder}
         name={name}
         value={value}
         onChange={onChange}
+        inputProps={{
+          id: name,
+          "aria-invalid": error.toString(),
+          "aria-describedby": error ? errorId : undefined,
+          "aria-label": placeholder,
+        }}
         variant="outlined"
         sx={{
           position: "relative",
@@ -59,6 +63,7 @@ export const ControlledInput = ({
       {error && (
         <Typography
           id={errorId}
+          aria-live="polite"
           position={"absolute"}
           bottom={"-20px"}
           variant="caption"
