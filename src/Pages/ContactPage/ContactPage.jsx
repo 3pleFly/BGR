@@ -2,6 +2,8 @@ import { Stack, Typography } from "@mui/material";
 import { ContactForm } from "./ContactForm";
 import { useTranslation } from "../../Hooks/useTranslation";
 import { AppMap } from "../../Components/AppMap";
+import { Link } from "react-router-dom";
+import { AppRoutes } from "../../Core/constants";
 
 const ContactPage = () => {
   const translation = useTranslation();
@@ -9,22 +11,24 @@ const ContactPage = () => {
   const contactInfo = [
     { label: "משרד:", info: translation.forPageContact.contextOffice },
     { label: "דואר:", info: translation.forPageContact.contextPost },
-    { label: "מייל:", info: translation.forPageContact.contextEmail },
-    { label: "טלפון:", info: translation.forPageContact.contextPhone },
+    { label: "מייל:", info: translation.email, type: "mail" },
+    { label: "טלפון:", info: translation.phone, type: "tel" },
   ];
   return (
     <Stack
       gap={{ mobile: "55px", tablet: "" }}
       padding={{ mobile: "80px 0px 0px 0px", tablet: "80px 0px" }}
     >
-      <Stack gap={{ mobile: "72px", tablet: "" }} >
+      <Stack gap={{ mobile: "72px", tablet: "" }}>
         <Stack alignItems={"center"} gap={{ mobile: "56px", tablet: "" }}>
-          <Stack
-            component={"img"}
-            src={"/assets/images/Logo/contact-page-logo.svg"}
-            alt={"RGB logo"}
-            width={{ mobile: "110px", tablet: "390px" }}
-          />
+          <Link to={AppRoutes.ROOT}>
+            <Stack
+              component={"img"}
+              src={"/assets/images/Logo/contact-page-logo.svg"}
+              alt={"RGB logo"}
+              width={{ mobile: "110px", tablet: "390px" }}
+            />
+          </Link>
           <Stack
             component={"ul"}
             alignItems={"center"}
@@ -69,6 +73,8 @@ const ContactPage = () => {
 const Label = ({ props }) => (
   <Stack component={"li"} sx={{ listStyle: "none" }}>
     <Typography
+      component={props.type ? Link : "p"}
+      to={props.type === "mail" ? `mailto:${props.info}` : `tel:${props.info}`}
       fontSize={{ mobile: "18px", tablet: "40px" }}
       color={"primary.main"}
       textAlign={"center"}

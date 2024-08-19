@@ -44,9 +44,6 @@ import { TranslationContext } from "../Context/TranslationContext";
  * @typedef {Object} ForPageContact
  * @property {string} contextOffice - Office address.
  * @property {string} contextPost - Postal address.
- * @property {string} contextEmail - Contact email.
- * @property {string} contextPhone - Contact phone number.
- * @property {string} contextFax - Fax number.
  * @property {ContactForm} form - Form labels and placeholders.
  */
 
@@ -68,6 +65,9 @@ import { TranslationContext } from "../Context/TranslationContext";
  * @property {TitleContactDetails} TitleContactDetails - Title contact details.
  * @property {ForPageContact} forPageContact - Contact information.
  * @property {ForAccessibilityPage} forAccessibilityPage - Accessibility page details.
+ * @property {string} email - Contact email.
+ * @property {string} phone - Contact phone number.
+ * @property {string} fax - Fax number.
  */
 
 /**

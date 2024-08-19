@@ -1,7 +1,8 @@
 import { Button, Stack, Typography } from "@mui/material";
+import { Link } from "react-router-dom";
+import { AppRoutes } from "../../../Core/constants";
 
 export const Logo = ({ handleScroll }) => {
-
   return (
     <Stack
       bgcolor={"primary.light"}
@@ -9,7 +10,12 @@ export const Logo = ({ handleScroll }) => {
       justifyContent={"space-between"}
     >
       <Stack margin={"auto"}>
-        <Stack gap={{ mobile: "23px" }} alignItems={"center"}>
+        <Stack
+          component={Link}
+          to={AppRoutes.ROOT}
+          gap={{ mobile: "23px" }}
+          alignItems={"center"}
+        >
           <Stack
             component={"img"}
             src={"/assets/images/Logo/logo.svg"}

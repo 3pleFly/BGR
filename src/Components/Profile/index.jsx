@@ -62,11 +62,12 @@ export const Profile = ({
               <Stack
                 position={"absolute"}
                 aria-hidden={true}
-                bottom={{ mobile: "20px", desktop: "20px" }}
+                bottom={{ mobile: "20px", tablet: "-20px", laptop: "20px" }}
                 left={{
                   mobile: imageProfileLogo ? "-110px" : "-70px",
-                  desktop: imageProfileLogo ? "-280px" : "-280px",
-                  large: imageProfileLogo ? "-350px" : "-350px",
+                  tablet: imageProfileLogo ? "-110px" : "-100px",
+                  laptop: imageProfileLogo ? "-150px" : "-100px",
+                  desktop: imageProfileLogo ? "-350px" : "-100px",
                 }}
                 alignItems={"flex-end"}
               >
@@ -141,7 +142,9 @@ export const Profile = ({
               tabIndex={0}
               width={{ mobile: "100px", laptop: "150px", desktop: "200px" }}
               aria-label={"המשך קריאה"}
-              alignSelf={"flex-end"}
+              style={{
+                alignSelf: "flex-end",
+              }}
             >
               <img
                 src={"/assets/images/Icons/ContinueReading.svg"}

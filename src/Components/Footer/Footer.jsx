@@ -1,13 +1,17 @@
 import { Stack, Typography, useMediaQuery, useTheme } from "@mui/material";
+import { useTranslation } from "../../Hooks/useTranslation";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const theme = useTheme();
   const isDesktop = useMediaQuery(theme.breakpoints.up("tablet"));
 
+  const translation = useTranslation();
+
   const contactDetails = [
-    { label: "מייל", info: "BGR@gmail.com" },
-    { label: "טלפון", info: "972.3.6544.303+" },
-    { label: "פקס", info: "972.3.6544.307+" },
+    { label: "מייל", info: translation.email, type: "mail" },
+    { label: "טלפון", info: translation.phone, type: "tel" },
+    { label: "פקס", info: translation.fax, type: "fax" },
     {
       label: "משרד",
       info: " מגדל הכשרת-היישוב. קומה 27. רח' ז'בוטינסקי 9 בני ברק",
@@ -39,14 +43,14 @@ const Footer = () => {
           {contactDetails
             .slice(0, isDesktop ? contactDetails.length : 3)
             .map((c, i) => (
-              <ContactLabel info={c.info} label={c.label} key={i} />
+              <ContactLabel props={c} key={i} />
             ))}
         </Stack>
       </Stack>
       {!isDesktop && (
         <Stack fontSize={"15px"} fontWeight={500}>
           {contactDetails.slice(3, contactDetails.length).map((c, i) => (
-            <ContactLabel info={c.info} label={c.label} key={i} />
+            <ContactLabel props={c} key={i} />
           ))}
         </Stack>
       )}
@@ -54,13 +58,32 @@ const Footer = () => {
   );
 };
 
-const ContactLabel = ({ label, info }) => (
-  <Typography
-    fontSize={"inherit"}
-    fontWeight={"inherit"}
-    color={"primary.light"}
-  >
-    <span style={{ fontWeight: 700 }}>{label}:</span> {info}
-  </Typography>
-);
+const ContactLabel = ({ props }) => {
+  const getProps = (type) => {
+    switch (type) {
+      case "mail":
+        return "mailto:";
+      case "tel":
+        return "tel:";
+      case "fax":
+        return "fax:";
+
+      default:
+        return "";
+    }
+  };
+
+  return (
+    <Typography
+      component={props.type ? Link : "p"}
+      to={`${getProps(props.type)}${props.info}`}
+      fontSize={"inherit"}
+      fontWeight={"inherit"}
+      color={"primary.light"}
+      sx={{ textDecoration: "none" }}
+    >
+      <span style={{ fontWeight: 700 }}>{props.label}:</span> {props.info}
+    </Typography>
+  );
+};
 export default Footer;
