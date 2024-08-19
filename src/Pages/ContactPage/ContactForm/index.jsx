@@ -1,5 +1,5 @@
 import { Button, Stack, Typography } from "@mui/material";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ControlledInput } from "../../../Components/ControlledInput";
 import { ControlledTextarea } from "../../../Components/ControlledTextarea";
 import { useTranslation } from "../../../Hooks/useTranslation";
@@ -8,17 +8,23 @@ import { Environment } from "../../../Core/constants";
 
 emailjs.init(Environment.EMAILJS_KEY);
 
+const RESPONSE_MESSAGE_TIME = 15000;
+
+const formInitialState = {
+  name: "",
+  phone: "",
+  reason: "",
+};
+
 export const ContactForm = () => {
   const translation = useTranslation();
   const formTranslation = translation.forPageContact.form;
 
+  const [response, setResponse] = useState(null);
+
   const inputRefs = useRef([]);
 
-  const [formData, setFormData] = useState({
-    name: "",
-    phone: "",
-    reason: "",
-  });
+  const [formData, setFormData] = useState(formInitialState);
 
   const [errors, setErrors] = useState({
     name: false,
@@ -57,7 +63,11 @@ export const ContactForm = () => {
           phone: formData.phone,
           date: new Date().toLocaleDateString(),
         });
+        
+        setResponse({ success: true });
+        setFormData(formInitialState);
       } catch (error) {
+        setResponse({ error: true });
         console.log(error);
       }
     } else {
@@ -67,23 +77,69 @@ export const ContactForm = () => {
     }
   };
 
+  useEffect(() => {
+    if (response)
+      setTimeout(() => {
+        setResponse(null);
+      }, RESPONSE_MESSAGE_TIME);
+  }, [response]);
+
   return (
     <Stack
       component="form"
       padding={{ mobile: "0px 18px 0px 30px", tablet: "0px 50px 0px 0px" }}
-      gap={{ mobile: "18px", tablet: "24px" }}
+      gap={{ mobile: "24px", tablet: "30px" }}
       alignItems={"center"}
       onSubmit={handleSubmit}
       width={"100%"}
     >
-      <Typography
-        fontSize={{ mobile: "24px", tablet: "32px" }}
-        fontWeight={600}
-        color="primary.main"
-        textAlign="center"
-      >
-        {formTranslation.title}
-      </Typography>
+      <Stack position={"relative"}>
+        <Typography
+          fontSize={{ mobile: "24px", tablet: "32px" }}
+          fontWeight={600}
+          color="primary.main"
+          textAlign="center"
+        >
+          {formTranslation.title}
+        </Typography>
+        {response?.success && (
+          <Typography
+          role={"alert"}
+            aria-live="assertive"
+            position={"absolute"}
+            bottom={"-30px"}
+            right={"50%"}
+            margin={"0 auto"}
+            variant="caption"
+            fontSize={{ mobile: "15px", tablet: "20px" }}
+            whiteSpace={"nowrap"}
+            fontWeight={600}
+            color="primary.main"
+            sx={{ transform: "translateX(50%)" }}
+          >
+            הפניה נשלחה!
+          </Typography>
+        )}
+        {response?.error && (
+          <Typography
+          role={"alert"}
+
+            aria-live="assertive"
+            position={"absolute"}
+            bottom={"-30px"}
+            right={"50%"}
+            fontSize={{ mobile: "15px", tablet: "20px" }}
+            variant="caption"
+            fontWeight={600}
+            whiteSpace={"nowrap"}
+            color="error.main"
+            paddingRight={"15px"}
+            sx={{ transform: "translateX(50%)" }}
+          >
+            קרתה תקלה, אנא נסו מאוחר יותר
+          </Typography>
+        )}
+      </Stack>
       <Stack
         gap={{ mobile: "28px", tablet: "32px" }}
         maxWidth={"500px"}

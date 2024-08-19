@@ -1,10 +1,13 @@
 import { Stack, Typography } from "@mui/material";
 import { useTranslation } from "../../Hooks/useTranslation";
 import { useParseRichText } from "../../Hooks/useParseRichText";
+import { useReplacePhonePrefix } from "../../Hooks/useReplacePhonePrefix";
+import { Link } from "react-router-dom";
 
 const AccessibilityPage = () => {
   const translation = useTranslation();
 
+  const { replace } = useReplacePhonePrefix();
   const { parseRichText } = useParseRichText();
   return (
     <Stack
@@ -13,7 +16,7 @@ const AccessibilityPage = () => {
     >
       <Stack
         component={"img"}
-        src={"/assets/images/Logo/contact-page-logo.svg"}
+        src={"/assets/images/Logo/contact-page-logo.webp"}
         alt={"RGB logo"}
         width={{ mobile: "110px", tablet: "390px" }}
         alignSelf={"center"}
@@ -42,6 +45,26 @@ const AccessibilityPage = () => {
           {parseRichText(
             translation.forAccessibilityPage.accessibilityStatement
           )}
+          <br />
+          <br />
+          <Stack>
+            <Typography
+              component={Link}
+              to={`mailto:${translation.email}`}
+              color={"primary.main"}
+              fontSize={{ mobile: "16px", tablet: "30px" }}
+            >
+              <strong>דואר:</strong> {replace(translation.email)}
+            </Typography>
+            <Typography
+              component={Link}
+              to={`tel:${translation.phone}`}
+              color={"primary.main"}
+              fontSize={{ mobile: "16px", tablet: "30px" }}
+            >
+              <strong>טלפון:</strong> {replace(translation.phone)}
+            </Typography>
+          </Stack>
         </Stack>
       </Stack>
     </Stack>

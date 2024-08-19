@@ -18,7 +18,7 @@ export const Logo = ({ handleScroll }) => {
         >
           <Stack
             component={"img"}
-            src={"/assets/images/Logo/logo.svg"}
+            src={"/assets/images/Logo/logo.webp"}
             alt="BGR Logo"
             width={{
               mobile: "312px",

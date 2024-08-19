@@ -1,6 +1,7 @@
 import { Stack, Typography, useMediaQuery, useTheme } from "@mui/material";
 import { useTranslation } from "../../Hooks/useTranslation";
 import { Link } from "react-router-dom";
+import { useReplacePhonePrefix } from "../../Hooks/useReplacePhonePrefix";
 
 const Footer = () => {
   const theme = useTheme();
@@ -59,6 +60,8 @@ const Footer = () => {
 };
 
 const ContactLabel = ({ props }) => {
+  const { replace } = useReplacePhonePrefix();
+
   const getProps = (type) => {
     switch (type) {
       case "mail":
@@ -73,16 +76,19 @@ const ContactLabel = ({ props }) => {
     }
   };
 
+  const isPhoneOrFax = props.type === "tel" || props.type === "fax";
+
   return (
     <Typography
       component={props.type ? Link : "p"}
-      to={`${getProps(props.type)}${props.info}`}
+      to={`${getProps(props.type)}${props.info.replaceAll("-", "")}`}
       fontSize={"inherit"}
       fontWeight={"inherit"}
       color={"primary.light"}
       sx={{ textDecoration: "none" }}
     >
-      <span style={{ fontWeight: 700 }}>{props.label}:</span> {props.info}
+      <span style={{ fontWeight: 700 }}>{props.label}:</span>{" "}
+      {isPhoneOrFax ? replace(props.info) : props.info}
     </Typography>
   );
 };

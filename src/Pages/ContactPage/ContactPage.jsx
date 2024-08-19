@@ -1,6 +1,7 @@
 import { Stack, Typography } from "@mui/material";
 import { ContactForm } from "./ContactForm";
 import { useTranslation } from "../../Hooks/useTranslation";
+import { useReplacePhonePrefix } from "../../Hooks/useReplacePhonePrefix";
 import { AppMap } from "../../Components/AppMap";
 import { Link } from "react-router-dom";
 import { AppRoutes } from "../../Core/constants";
@@ -17,14 +18,14 @@ const ContactPage = () => {
   return (
     <Stack
       gap={{ mobile: "55px", tablet: "" }}
-      padding={{ mobile: "80px 0px 0px 0px", tablet: "80px 0px" }}
+      padding={{ mobile: "100px 0px 0px 0px", tablet: "80px 0px" }}
     >
-      <Stack gap={{ mobile: "72px", tablet: "" }}>
+      <Stack gap={{ mobile: "52px", tablet: "72px" }}>
         <Stack alignItems={"center"} gap={{ mobile: "56px", tablet: "" }}>
           <Link to={AppRoutes.ROOT}>
             <Stack
               component={"img"}
-              src={"/assets/images/Logo/contact-page-logo.svg"}
+              src={"/assets/images/Logo/contact-page-logo.webp"}
               alt={"RGB logo"}
               width={{ mobile: "110px", tablet: "390px" }}
             />
@@ -70,18 +71,25 @@ const ContactPage = () => {
   );
 };
 
-const Label = ({ props }) => (
-  <Stack component={"li"} sx={{ listStyle: "none" }}>
-    <Typography
-      component={props.type ? Link : "p"}
-      to={props.type === "mail" ? `mailto:${props.info}` : `tel:${props.info}`}
-      fontSize={{ mobile: "18px", tablet: "40px" }}
-      color={"primary.main"}
-      textAlign={"center"}
-    >
-      <span style={{ fontWeight: 600 }}>{props.label}</span> {props.info}
-    </Typography>
-  </Stack>
-);
+const Label = ({ props }) => {
+  const { replace } = useReplacePhonePrefix();
+
+  return (
+    <Stack component={"li"} sx={{ listStyle: "none" }}>
+      <Typography
+        component={props.type ? Link : "p"}
+        to={
+          props.type === "mail" ? `mailto:${props.info}` : `tel:${props.info}`
+        }
+        fontSize={{ mobile: "18px", tablet: "40px" }}
+        color={"primary.main"}
+        textAlign={"center"}
+      >
+        <span style={{ fontWeight: 600 }}>{props.label}</span>{" "}
+        {props.type === "tel" ? replace(props.info) : props.info}
+      </Typography>
+    </Stack>
+  );
+};
 
 export default ContactPage;

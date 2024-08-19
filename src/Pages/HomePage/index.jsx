@@ -70,7 +70,7 @@ export const HomePage = () => {
         <Stack height={"75vh"} width={"100%"}>
           <Stack
             component={"img"}
-            src={"/assets/images/Profile/MeetingOfficeOutside.png"}
+            src={"/assets/images/Profile/MeetingOfficeOutside.webp"}
             alt={"Meeting Office Outside"}
             sx={{
               borderRadius: "14px",
@@ -83,7 +83,7 @@ export const HomePage = () => {
         <Stack height={"75vh"} width={"100%"} alignItems={"flex-end"}>
           <Stack
             component={"img"}
-            src={"/assets/images/Profile/MeetingOffice.png"}
+            src={"/assets/images/Profile/MeetingOffice.webp"}
             alt={"Meeting In Office"}
             display={{ mobile: "none", tablet: "flex" }}
             sx={{
@@ -97,7 +97,7 @@ export const HomePage = () => {
         <Stack height={"auto"} width={"100%"} alignItems={"center"}>
           <Stack
             component={"img"}
-            src={"/assets/images/Profile/allWorkers.png"}
+            src={"/assets/images/Profile/allWorkers.webp"}
             alt={"All Workers"}
             display={{ mobile: "none", tablet: "flex" }}
             sx={{
