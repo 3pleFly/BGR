@@ -3,6 +3,10 @@ import { useRef, useState } from "react";
 import { ControlledInput } from "../../../Components/ControlledInput";
 import { ControlledTextarea } from "../../../Components/ControlledTextarea";
 import { useTranslation } from "../../../Hooks/useTranslation";
+import emailjs from "@emailjs/browser";
+import { Environment } from "../../../Core/constants";
+
+emailjs.init(Environment.EMAILJS_KEY);
 
 export const ContactForm = () => {
   const translation = useTranslation();
@@ -31,7 +35,7 @@ export const ContactForm = () => {
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const newErrors = {
       name: formData.name.trim() === "",
@@ -43,8 +47,19 @@ export const ContactForm = () => {
     const hasErrors = Object.values(newErrors).some((error) => error);
 
     if (!hasErrors) {
-      // Handle form submission
-      console.log("Form submitted:", formData);
+      const serviceId = Environment.EMAILJS_SERVICE_ID;
+      const templateId = Environment.EMAILJS_TEMPLATE_ID;
+
+      try {
+        await emailjs.send(serviceId, templateId, {
+          name: formData.name,
+          reason: formData.reason,
+          phone: formData.phone,
+          date: new Date().toLocaleDateString(),
+        });
+      } catch (error) {
+        console.log(error);
+      }
     } else {
       if (newErrors.name) inputRefs.current[0]?.focus();
       else if (newErrors.phone) inputRefs.current[1]?.focus();
