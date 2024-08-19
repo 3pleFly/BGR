@@ -1,4 +1,5 @@
-import { InputBase, Typography, Stack } from "@mui/material";
+import { Typography, Stack, TextField } from "@mui/material";
+import { useId } from "react";
 
 export const ControlledInput = ({
   placeholder,
@@ -9,19 +10,37 @@ export const ControlledInput = ({
   error,
   helperText,
 }) => {
+  const errorId = useId();
+
   return (
     <Stack spacing={1} position={"relative"}>
-      <InputBase
+      <TextField
+        id={name}
+        aria-invalid={!!error}
+        aria-describedby={error ? errorId : undefined}
+        aria-label={placeholder}
+        autoComplete={"off"}
         placeholder={placeholder}
         name={name}
         value={value}
         onChange={onChange}
-        variant="standard"
+        variant="outlined"
         sx={{
-          border: "1px solid",
-          borderColor: error ? "error.main" : "primary.main",
-          borderRadius: "14px",
+          position: "relative",
           bgcolor: "primary.light",
+          "&&& .MuiOutlinedInput-notchedOutline": {
+            border: "1px solid",
+            borderColor: error ? "error.main" : "primary.main",
+            borderRadius: "14px",
+          },
+
+          ":focus-within": {
+            "&&& .MuiOutlinedInput-notchedOutline": {
+              border: "2px solid",
+              borderColor: error ? "error.main" : "primary.main",
+              borderRadius: "14px",
+            },
+          },
           input: {
             padding: { mobile: "7px 11px 10px", tablet: "9px 18px 10px" },
             color: "primary.main",
@@ -39,6 +58,7 @@ export const ControlledInput = ({
       />
       {error && (
         <Typography
+          id={errorId}
           position={"absolute"}
           bottom={"-20px"}
           variant="caption"

@@ -1,4 +1,4 @@
-import { ButtonBase, Stack, Typography } from "@mui/material";
+import { Button, Stack, Typography } from "@mui/material";
 import { useState } from "react";
 import { ControlledInput } from "../../../Components/ControlledInput";
 import { ControlledTextarea } from "../../../Components/ControlledTextarea";
@@ -95,13 +95,16 @@ export const ContactForm = () => {
             helperText={formTranslation.required}
           />
         </Stack>
-        <ButtonBase
+        <Button
           type="submit"
           sx={{
+            minWidth: "0px",
+            minHeight: "0px",
             alignSelf: "flex-end",
             bgcolor: "primary.main",
             color: "primary.light",
             borderRadius: "15px",
+            fontSize: { mobile: "16px", tablet: "30px" },
             fontWeight: 600,
             alignItems: "center",
             justifyContent: "center",
@@ -110,7 +113,7 @@ export const ContactForm = () => {
           }}
         >
           {formTranslation.send}
-        </ButtonBase>
+        </Button>
       </Stack>
     </Stack>
   );

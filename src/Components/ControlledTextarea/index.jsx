@@ -1,4 +1,5 @@
 import { Typography, Stack } from "@mui/material";
+import { useId } from "react";
 
 export const ControlledTextarea = ({
   placeholder,
@@ -9,6 +10,8 @@ export const ControlledTextarea = ({
   error,
   helperText,
 }) => {
+  const errorId = useId();
+
   return (
     <Stack
       spacing={1}
@@ -31,13 +34,18 @@ export const ControlledTextarea = ({
             height: { mobile: "36px", tablet: "42px" },
           },
           ":focus": {
-            outline: "0px solid",
+            outline: "1px solid",
+            outlineColor: "primary.main",
           },
           ...sx,
         },
       }}
     >
       <textarea
+        id={name}
+        aria-invalid={!!error}
+        aria-describedby={error ? errorId : undefined}
+        aria-label={placeholder}
         placeholder={placeholder}
         name={name}
         value={value}
@@ -46,6 +54,7 @@ export const ControlledTextarea = ({
       />
       {error && (
         <Typography
+          id={errorId}
           position={"absolute"}
           bottom={"-20px"}
           variant="caption"

@@ -1,8 +1,6 @@
-import { Button, ButtonBase, Stack, Typography } from "@mui/material";
-import { useEffect, useRef } from "react";
+import { Button, Stack, Typography } from "@mui/material";
 
 export const Logo = ({ handleScroll }) => {
-  const scrollButtonRef = useRef(null);
 
   return (
     <Stack
@@ -43,9 +41,11 @@ export const Logo = ({ handleScroll }) => {
           מיסוי מקרקעין מסים עקיפים ומס הכנסה
         </Typography>
       </Stack>
-      <ButtonBase
+      <Button
+        tabIndex={0}
         onClick={handleScroll}
         sx={{
+          minWidth: "0px",
           width: {
             mobile: "22px",
             tablet: "24px",
@@ -64,7 +64,7 @@ export const Logo = ({ handleScroll }) => {
           alt="Scroll"
           sx={{ width: "100%", height: "auto" }}
         />
-      </ButtonBase>
+      </Button>
     </Stack>
   );
 };

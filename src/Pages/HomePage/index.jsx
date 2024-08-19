@@ -73,6 +73,7 @@ export const HomePage = () => {
             src={"/assets/images/Profile/MeetingOfficeOutside.png"}
             alt={"Meeting Office Outside"}
             sx={{
+              borderRadius: "14px",
               objectFit: "cover",
               width: "100%",
               maxWidth: "875px",
@@ -86,6 +87,7 @@ export const HomePage = () => {
             alt={"Meeting In Office"}
             display={{ mobile: "none", tablet: "flex" }}
             sx={{
+              borderRadius: "14px",
               objectFit: "cover",
               width: "100%",
               maxWidth: "875px",
@@ -99,6 +101,7 @@ export const HomePage = () => {
             alt={"All Workers"}
             display={{ mobile: "none", tablet: "flex" }}
             sx={{
+              borderRadius: "14px",
               objectFit: "cover",
               width: "100%",
               maxWidth: "875px",

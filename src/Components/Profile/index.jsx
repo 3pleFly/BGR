@@ -1,5 +1,5 @@
 import { Stack, Typography } from "@mui/material";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useParseRichText } from "../../Hooks/useParseRichText";
 import { useTranslation } from "../../Hooks/useTranslation";
 
@@ -13,14 +13,6 @@ export const Profile = ({
   aboutPerson,
   elementRef,
 }) => {
-  const navigate = useNavigate();
-
-  const moveToSpecificProfile = () => {
-    navigate(`/profile/${profileId}`);
-  };
-
-  const translation = useTranslation();
-
   const { parseRichText } = useParseRichText();
 
   return (
@@ -144,18 +136,19 @@ export const Profile = ({
             >
               {parseRichText(aboutPerson)}
             </Typography>
-            <Stack
+            <Link
+              to={`/profile/${profileId}`}
+              tabIndex={0}
               width={{ mobile: "100px", laptop: "150px", desktop: "200px" }}
               aria-label={"המשך קריאה"}
               alignSelf={"flex-end"}
-              onClick={() => moveToSpecificProfile()}
             >
               <img
                 src={"/assets/images/Icons/ContinueReading.svg"}
                 alt="Icon to continue reading"
                 style={{ cursor: "pointer" }}
               />
-            </Stack>
+            </Link>
           </Stack>
         </Stack>
       </Stack>

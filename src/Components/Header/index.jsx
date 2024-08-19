@@ -1,4 +1,4 @@
-import { ButtonBase, Drawer, Typography, Stack, Divider } from "@mui/material";
+import { Button, Drawer, Typography, Stack, Divider } from "@mui/material";
 import { Fragment, useState } from "react";
 import { Link } from "react-router-dom";
 import { AppRoutes } from "../../Core/constants";
@@ -24,13 +24,17 @@ export const Header = () => {
       width={"100%"}
       zIndex={1000}
     >
-      <ButtonBase onClick={toggleDrawer} aria-label="Open Navbar" sx={{ alignSelf: "flex-start" }}>
+      <Button
+        onClick={toggleDrawer}
+        aria-label="Open Navbar"
+        sx={{ alignSelf: "flex-start" }}
+      >
         <Stack
           component={"img"}
           src={"/assets/images/Icons/OpenNavbar.svg"}
           alt="Open navbar"
         />
-      </ButtonBase>
+      </Button>
       <Drawer
         open={openDrawer}
         anchor={"right"}
@@ -44,13 +48,16 @@ export const Header = () => {
           },
         }}
       >
-        <ButtonBase
+        <Button
           onClick={toggleDrawer}
           aria-label="Close Navbar"
           sx={{
             alignSelf: "flex-start",
             position: "relative",
             right: "-30px",
+            "&:focus": {
+              outline: "-webkit-focus-ring-color auto 1px",
+            },
           }}
         >
           <Stack
@@ -58,7 +65,7 @@ export const Header = () => {
             src={"/assets/images/Icons/ClosedNavbar.svg"}
             alt="Open navbar"
           />
-        </ButtonBase>
+        </Button>
         <Stack
           component={"ul"}
           padding={"0px"}
