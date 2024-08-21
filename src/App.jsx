@@ -6,6 +6,10 @@ import { AppLayout } from "./Components/Layout";
 import "./App.css";
 import { ProfilePage } from "./Pages/ProfilePage";
 import { AppRoutes } from "./Core/constants";
+import packageJson from "../package.json";
+
+console.log("Version:", packageJson.version);
+
 function App() {
   return (
     <Routes>

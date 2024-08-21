@@ -8,9 +8,6 @@ import { Provider } from "react-redux";
 import { CssBaseline } from "@mui/material";
 import { TranslationProvider } from "./Providers/TranslationProvider/index.jsx";
 import { HelmetProvider } from "react-helmet-async";
-import packageJson from "../package.json";
-
-console.log("Version:", packageJson.version);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <BrowserRouter>

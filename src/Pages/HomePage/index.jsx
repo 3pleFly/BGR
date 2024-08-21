@@ -65,9 +65,9 @@ export const HomePage = () => {
         display={{ mobile: "none", tablet: "flex" }}
         padding={"400px 44px 55px 44px"}
         alignItems={"center"}
-        gap={"40px"}
+        gap={"150px"}
       >
-        <Stack height={"75vh"} width={"100%"}>
+        <Stack width={"100%"}>
           <Image
             src={"/assets/images/Profile/MeetingOfficeOutside.webp"}
             alt={"Meeting Office Outside"}
@@ -76,13 +76,14 @@ export const HomePage = () => {
               objectFit: "cover",
               width: "100%",
               maxWidth: "875px",
+              alignSelf: "flex-start",
               height: "auto",
             }}
             width={800}
             height={400}
           />
         </Stack>
-        <Stack height={"75vh"} width={"100%"} alignItems={"flex-end"}>
+        <Stack width={"100%"} alignItems={"flex-end"}>
           <Image
             src={"/assets/images/Profile/MeetingOffice.webp"}
             alt={"Meeting In Office"}
