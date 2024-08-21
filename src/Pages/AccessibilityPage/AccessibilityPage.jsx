@@ -54,7 +54,7 @@ const AccessibilityPage = () => {
               color={"primary.main"}
               fontSize={{ mobile: "16px", tablet: "30px" }}
             >
-              <strong>דואר:</strong> {replace(translation.email)}
+              <strong>דואר:</strong> {translation.email}
             </Typography>
             <Typography
               component={Link}

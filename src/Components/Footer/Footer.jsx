@@ -29,32 +29,28 @@ const Footer = () => {
       gap={{ mobile: "20px" }}
       alignItems={"center"}
     >
-      <Stack direction={"row"} alignItems={"center"} gap={{ mobile: "12px" }}>
+      <Stack
+        direction={"row"}
+        alignItems={"flex-start"}
+        gap={{ mobile: "12px" }}
+      >
         <Stack
           component={"img"}
           src={"/assets/images/Profile/BGRLogoSmall.png"}
           alt="BGR logo"
           sx={{
+            marginTop: "5px",
             width: { mobile: "150px", tablet: "300px", laptop: "auto" },
             height: { mobile: "64px", tablet: "145px", laptop: "185px" },
             objectFit: "contain",
           }}
         />
         <Stack fontSize={{ mobile: "18px", laptop: "26px" }} fontWeight={500}>
-          {contactDetails
-            .slice(0, isDesktop ? contactDetails.length : 3)
-            .map((c, i) => (
-              <ContactLabel props={c} key={i} />
-            ))}
-        </Stack>
-      </Stack>
-      {!isDesktop && (
-        <Stack fontSize={"15px"} fontWeight={500}>
-          {contactDetails.slice(3, contactDetails.length).map((c, i) => (
+          {contactDetails.map((c, i) => (
             <ContactLabel props={c} key={i} />
           ))}
         </Stack>
-      )}
+      </Stack>
     </Stack>
   );
 };

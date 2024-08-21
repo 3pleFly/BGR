@@ -27,7 +27,7 @@ const ContactPage = () => {
               component={"img"}
               src={"/assets/images/Logo/contact-page-logo.webp"}
               alt={"RGB logo"}
-              width={{ mobile: "110px", tablet: "390px" }}
+              width={{ mobile: "220px", tablet: "400px" }}
             />
           </Link>
           <Stack
