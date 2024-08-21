@@ -3,6 +3,7 @@ import { useTranslation } from "../../Hooks/useTranslation";
 import { useParseRichText } from "../../Hooks/useParseRichText";
 import { useReplacePhonePrefix } from "../../Hooks/useReplacePhonePrefix";
 import { Link } from "react-router-dom";
+import { Image } from "../../Components/Image";
 
 const AccessibilityPage = () => {
   const translation = useTranslation();
@@ -14,12 +15,16 @@ const AccessibilityPage = () => {
       padding={{ mobile: "80px 54px", tablet: "80px 93px 80px 90px" }}
       gap={{ mobile: "52px", tablet: "56px" }}
     >
-      <Stack
-        component={"img"}
+      <Image
         src={"/assets/images/Logo/contact-page-logo.webp"}
         alt={"RGB logo"}
-        width={{ mobile: "110px", tablet: "390px" }}
-        alignSelf={"center"}
+        width={390}
+        height={280}
+        sx={{
+          width: { mobile: "110px", tablet: "390px" },
+          height:"auto",
+          alignItems: "center",
+        }}
       />
       <Stack gap={{ mobile: "36px", tablet: "56px" }}>
         <Typography

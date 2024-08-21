@@ -2,6 +2,7 @@ import { Button, Drawer, Typography, Stack, Divider } from "@mui/material";
 import { Fragment, useState } from "react";
 import { Link } from "react-router-dom";
 import { AppRoutes } from "../../Core/constants";
+import { Image } from "../Image";
 
 export const Header = () => {
   const [openDrawer, setOpenDrawer] = useState(false);
@@ -19,7 +20,7 @@ export const Header = () => {
   return (
     <Stack
       position={"fixed"}
-      padding={{ mobile: "15px 20px 15px 20px", tablet: "10px 34px 10px 34px" }}
+      padding={{ mobile: "15px 0px 15px 20px", tablet: "10px 34px 10px 34px" }}
       bgcolor={"primary.light"}
       width={"100%"}
       zIndex={1000}
@@ -27,12 +28,13 @@ export const Header = () => {
       <Button
         onClick={toggleDrawer}
         aria-label="Open Navbar"
-        sx={{ alignSelf: "flex-start" }}
+        sx={{ alignSelf: "flex-start", padding: "0px" }}
       >
-        <Stack
-          component={"img"}
+        <Image
           src={"/assets/images/Icons/OpenNavbar.svg"}
           alt="Open navbar"
+          width={60}
+          height={60}
         />
       </Button>
       <Drawer
@@ -60,10 +62,11 @@ export const Header = () => {
             },
           }}
         >
-          <Stack
-            component={"img"}
+          <Image
             src={"/assets/images/Icons/ClosedNavbar.svg"}
             alt="Open navbar"
+            width={51}
+            height={16}
           />
         </Button>
         <Stack

@@ -4,6 +4,7 @@ import { Logo } from "./Logo";
 import { useRef } from "react";
 import { useTranslation } from "../../Hooks/useTranslation";
 import { Helmet } from "react-helmet-async";
+import { Image } from "../../Components/Image";
 
 export const HomePage = () => {
   const profileRefs = useRef([]);
@@ -67,8 +68,7 @@ export const HomePage = () => {
         gap={"40px"}
       >
         <Stack height={"75vh"} width={"100%"}>
-          <Stack
-            component={"img"}
+          <Image
             src={"/assets/images/Profile/MeetingOfficeOutside.webp"}
             alt={"Meeting Office Outside"}
             sx={{
@@ -76,35 +76,42 @@ export const HomePage = () => {
               objectFit: "cover",
               width: "100%",
               maxWidth: "875px",
+              height: "auto",
             }}
+            width={800}
+            height={400}
           />
         </Stack>
         <Stack height={"75vh"} width={"100%"} alignItems={"flex-end"}>
-          <Stack
-            component={"img"}
+          <Image
             src={"/assets/images/Profile/MeetingOffice.webp"}
             alt={"Meeting In Office"}
-            display={{ mobile: "none", tablet: "flex" }}
             sx={{
+              display: { mobile: "none", tablet: "flex" },
               borderRadius: "14px",
               objectFit: "cover",
               width: "100%",
+              height: "auto",
               maxWidth: "875px",
             }}
+            width={800}
+            height={400}
           />
         </Stack>
         <Stack height={"auto"} width={"100%"} alignItems={"center"}>
-          <Stack
-            component={"img"}
+          <Image
             src={"/assets/images/Profile/allWorkers.webp"}
             alt={"All Workers"}
-            display={{ mobile: "none", tablet: "flex" }}
             sx={{
+              display: { mobile: "none", tablet: "flex" },
               borderRadius: "14px",
               objectFit: "cover",
               width: "100%",
+              height: "auto",
               maxWidth: "875px",
             }}
+            width={800}
+            height={400}
           />
         </Stack>
       </Stack>

@@ -1,6 +1,7 @@
 import { Button, Stack, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 import { AppRoutes } from "../../../Core/constants";
+import { Image } from "../../../Components/Image";
 
 export const Logo = ({ handleScroll }) => {
   return (
@@ -16,26 +17,34 @@ export const Logo = ({ handleScroll }) => {
           gap={{ mobile: "23px" }}
           alignItems={"center"}
         >
-          <Stack
-            component={"img"}
+          <Image
             src={"/assets/images/Logo/logo.webp"}
             alt="BGR Logo"
-            width={{
-              mobile: "312px",
-              tablet: "30%",
-              laptop: "30%",
-              desktop: "60%",
+            width={"312px"}
+            height={"130px"}
+            sx={{
+              width: {
+                mobile: "312px",
+                tablet: "30%",
+                laptop: "30%",
+                desktop: "60%",
+              },
+              height: "auto",
             }}
           />
-          <Stack
-            component={"img"}
+          <Image
             src={"/assets/images/Logo/sub-logo.svg"}
             alt="Law Office, Berger.Gabai.Rechtschaffen"
-            width={{
-              mobile: "312px",
-              tablet: "30%",
-              laptop: "30%",
-              desktop: "60%",
+            width={"312px"}
+            height={"130px"}
+            sx={{
+              width: {
+                mobile: "312px",
+                tablet: "30%",
+                laptop: "30%",
+                desktop: "60%",
+              },
+              height: "auto",
             }}
           />
         </Stack>
@@ -64,11 +73,12 @@ export const Logo = ({ handleScroll }) => {
           padding: 0,
         }}
       >
-        <Stack
-          component={"img"}
+        <Image
           src={"/assets/images/Logo/arrow.svg"}
-          alt="Scroll"
+          alt="Scroll button"
           sx={{ width: "100%", height: "auto" }}
+          width={50}
+          height={50}
         />
       </Button>
     </Stack>

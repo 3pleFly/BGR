@@ -2,6 +2,7 @@ import { Stack, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 import { useParseRichText } from "../../Hooks/useParseRichText";
 import { useTranslation } from "../../Hooks/useTranslation";
+import { Image } from "../Image";
 
 export const Profile = ({
   profileId,
@@ -146,10 +147,16 @@ export const Profile = ({
                 alignSelf: "flex-end",
               }}
             >
-              <img
+              <Image
                 src={"/assets/images/Icons/ContinueReading.svg"}
                 alt="Icon to continue reading"
-                style={{ cursor: "pointer" }}
+                width={100}
+                height={14}
+                sx={{
+                  cursor: "pointer",
+                  width: { mobile: "100px", tablet: "auto" },
+                  height: { mobile: "auto", tablet: "auto" },
+                }}
               />
             </Link>
           </Stack>

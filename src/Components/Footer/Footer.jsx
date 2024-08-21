@@ -2,6 +2,7 @@ import { Stack, Typography, useMediaQuery, useTheme } from "@mui/material";
 import { useTranslation } from "../../Hooks/useTranslation";
 import { Link } from "react-router-dom";
 import { useReplacePhonePrefix } from "../../Hooks/useReplacePhonePrefix";
+import { Image } from "../Image";
 
 const Footer = () => {
   const theme = useTheme();
@@ -34,10 +35,11 @@ const Footer = () => {
         alignItems={"flex-start"}
         gap={{ mobile: "12px" }}
       >
-        <Stack
-          component={"img"}
+        <Image
           src={"/assets/images/Profile/BGRLogoSmall.png"}
           alt="BGR logo"
+          width={"300px"}
+          height={"145px"}
           sx={{
             marginTop: "5px",
             width: { mobile: "150px", tablet: "300px", laptop: "auto" },

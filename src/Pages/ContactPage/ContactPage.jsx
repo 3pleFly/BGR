@@ -23,11 +23,15 @@ const ContactPage = () => {
       <Stack gap={{ mobile: "52px", tablet: "72px" }}>
         <Stack alignItems={"center"} gap={{ mobile: "56px", tablet: "" }}>
           <Link to={AppRoutes.ROOT}>
-            <Stack
-              component={"img"}
+            <Image
               src={"/assets/images/Logo/contact-page-logo.webp"}
               alt={"RGB logo"}
-              width={{ mobile: "220px", tablet: "400px" }}
+              width={400}
+              height={250}
+              sx={{
+                width: { mobile: "220px", tablet: "400px" },
+                height: "auto",
+              }}
             />
           </Link>
           <Stack
