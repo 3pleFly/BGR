@@ -25,7 +25,6 @@ export const HomePage = () => {
       behavior: "smooth",
     });
 
-    console.log(element);
     element.focus();
   };
 
