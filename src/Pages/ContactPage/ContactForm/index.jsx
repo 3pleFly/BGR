@@ -63,7 +63,7 @@ export const ContactForm = () => {
           phone: formData.phone,
           date: new Date().toLocaleDateString(),
         });
-        
+
         setResponse({ success: true });
         setFormData(formInitialState);
       } catch (error) {
@@ -104,7 +104,7 @@ export const ContactForm = () => {
         </Typography>
         {response?.success && (
           <Typography
-          role={"alert"}
+            role={"alert"}
             aria-live="assertive"
             position={"absolute"}
             bottom={"-30px"}
@@ -122,8 +122,7 @@ export const ContactForm = () => {
         )}
         {response?.error && (
           <Typography
-          role={"alert"}
-
+            role={"alert"}
             aria-live="assertive"
             position={"absolute"}
             bottom={"-30px"}

@@ -3,6 +3,7 @@ import { ContactForm } from "./ContactForm";
 import { useTranslation } from "../../Hooks/useTranslation";
 import { useReplacePhonePrefix } from "../../Hooks/useReplacePhonePrefix";
 import { AppMap } from "../../Components/AppMap";
+import { Image } from "../../Components/Image";
 import { Link } from "react-router-dom";
 import { AppRoutes } from "../../Core/constants";
 
