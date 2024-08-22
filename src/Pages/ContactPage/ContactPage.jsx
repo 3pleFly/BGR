@@ -30,7 +30,7 @@ const ContactPage = () => {
               width={400}
               height={250}
               sx={{
-                width: { mobile: "220px", tablet: "400px" },
+                width: { mobile: "300px", tablet: "400px" },
                 height: "auto",
               }}
             />

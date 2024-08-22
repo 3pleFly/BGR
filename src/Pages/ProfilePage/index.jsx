@@ -36,9 +36,9 @@ export const ProfilePage = () => {
       }}
     >
       <Helmet>
-        <title>{en_name}</title>
-        <meta property="og:title" content={en_name} />
-        <meta name="twitter:title" content={en_name} />
+        <title>{heb_name}</title>
+        <meta property="og:title" content={heb_name} />
+        <meta name="twitter:title" content={heb_name} />
       </Helmet>
       <Stack
         gap={{ mobile: "20px", tablet: "77px" }}

@@ -20,7 +20,7 @@ export const Header = () => {
   return (
     <Stack
       position={"fixed"}
-      padding={{ mobile: "15px 0px 15px 20px", tablet: "10px 34px 10px 34px" }}
+      padding={{ mobile: "15px 0px 15px 20px", desktop: "10px 14px 10px 34px" }}
       bgcolor={"primary.light"}
       width={"100%"}
       zIndex={1000}
@@ -35,6 +35,10 @@ export const Header = () => {
           alt="Open navbar"
           width={60}
           height={60}
+          sx={{
+            width: { mobile: "40px", desktop: "60px" },
+            height: { mobile: "40px", desktop: "60px" },
+          }}
         />
       </Button>
       <Drawer
@@ -54,8 +58,10 @@ export const Header = () => {
           onClick={toggleDrawer}
           aria-label="Close Navbar"
           sx={{
+            padding: "0px",
             alignSelf: "flex-start",
             position: "relative",
+            top: "-20px",
             right: "-30px",
             "&:focus": {
               outline: "-webkit-focus-ring-color auto 1px",
@@ -67,6 +73,10 @@ export const Header = () => {
             alt="Open navbar"
             width={51}
             height={16}
+            sx={{
+              width: { mobile: "40px", desktop: "60px" },
+              height: { mobile: "40px", desktop: "60px" },
+            }}
           />
         </Button>
         <Stack
